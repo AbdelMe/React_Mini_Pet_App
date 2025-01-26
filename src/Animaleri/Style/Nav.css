@@ -20,16 +20,29 @@ body{
 .content{
     background-color: #1826285e;
 }
-#LogOut{
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: 15px;
-    right: 30px;
+#LogOut, #Favourite , #Cart{
+    width: 35px;
+    height: 35px;
 }
 
+#LeftSide{
+    position: absolute;
+    width: 150px;
+    top: 15px;
+    right: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* footer{
+    position: absolute;
+    bottom: 15px;
+    left: 700px;
+} */
+
 /* Scroll Style */
-::-webkit-scrollbar{
+/* ::-webkit-scrollbar{
     width: 8px;
 }
 ::-webkit-scrollbar-track{
@@ -38,4 +51,4 @@ body{
 ::-webkit-scrollbar-thumb{
     background: linear-gradient(#642bff,#14afaa);
     border-radius: 1px;
-}
+} */

@@ -4,88 +4,117 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <ul className="menu biolife-menu clone-main-menu clone-primary-menu" id="primary-menu" data-menuname="main menu">
-            <li className="menu-item"><a href="#">Home</a></li>
-            <li className="menu-item menu-item-has-children has-megamenu">
-                <a href="#" className="menu-name" data-title="Shop">Shop</a>
-                <div className="wrap-megamenu lg-width-900 md-width-750">
-                    <div className="mega-content">
-                        {[
-                            {
-                                title: 'Fresh Berries',
-                                items: ['Fruit & Nut Gifts', 'Mixed Fruits', 'Oranges', 'Bananas & Plantains', 'Fresh Gala Apples']
-                            },
-                            {
-                                title: 'Vegetables',
-                                items: ['Berries', 'Pears', 'Chili Peppers', 'Fresh Avocado', 'Grapes']
-                            },
-                            {
-                                title: 'Fresh Fruits',
-                                items: ['Basket of apples', 'Strawberry', 'Blueberry', 'Orange', 'Pineapple']
-                            },
-                            {
-                                title: 'Featured Products',
-                                items: ['Coffee Creamers', 'Mayonnaise', 'Almond Milk', 'Fruit Jam', 'Beverages']
-                            }
-                        ].map((category, index) => (
-                            <div key={index} className="col-lg-3 col-md-3 col-xs-12 md-margin-bottom-0 xs-margin-bottom-25">
-                                <div className="wrap-custom-menu vertical-menu">
-                                    <h4 className="menu-title">{category.title}</h4>
-                                    <ul className="menu">
-                                        {category.items.map((item, idx) => (
-                                            <li key={idx}><a href="#">{item}</a></li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </li>
-            <li className="menu-item menu-item-has-children has-child">
-                <a href="#" className="menu-name" data-title="Product">Product</a>
-                <ul className="sub-menu">
-                    <li className="menu-item"><a href="#">Omelettes</a></li>
-                    <li className="menu-item"><a href="#">Breakfast Scrambles</a></li>
-                    <li className="menu-item menu-item-has-children has-child">
-                        <a href="#" className="menu-name" data-title="Eggs & other considerations">Eggs & other considerations</a>
-                        <ul className="sub-menu">
-                            {['Classic Breakfast', 'Huevos Rancheros', 'Everything Egg Sandwich', 'Egg Sandwich', 'Vegan Burrito', 'Biscuits and Gravy', 'Bacon Avo Egg Sandwich'].map((item, idx) => (
-                                <li key={idx} className="menu-item"><a href="#">{item}</a></li>
-                            ))}
-                        </ul>
-                    </li>
-                    <li className="menu-item"><a href="#">Griddle</a></li>
-                    <li className="menu-item menu-item-has-children has-child">
-                        <a href="#" className="menu-name" data-title="Sides & Extras">Sides & Extras</a>
-                        <ul className="sub-menu">
-                            {['Breakfast Burrito', 'Crab Cake Benedict', 'Corned Beef Hash', 'Steak & Eggs', 'Oatmeal', 'Fruit & Yogurt Parfait'].map((item, idx) => (
-                                <li key={idx} className="menu-item"><a href="#">{item}</a></li>
-                            ))}
-                        </ul>
-                    </li>
-                    <li className="menu-item"><a href="#">Biscuits</a></li>
-                    <li className="menu-item"><a href="#">Seasonal Fruit Plate</a></li>
-                </ul>
-            </li>
-            <li className="menu-item menu-item-has-children has-megamenu">
-                <a href="#" className="menu-name" data-title="Pages">Demo</a>
-                <div className="wrap-megamenu lg-width-800 md-width-750">
-                    <div className="mega-content">
-                        {/* Repeat similar mapping as above for Demo categories */}
-                    </div>
-                </div>
-            </li>
-            <li className="menu-item menu-item-has-children has-megamenu">
-                <a href="#" className="menu-name" data-title="Blog">Blog</a>
-                <div className="wrap-megamenu lg-width-800 md-width-750">
-                    <div className="mega-content">
-                        {/* Blog categories mapping */}
-                    </div>
-                </div>
-            </li>
-            <li className="menu-item"><a href="contact.html">Contact</a></li>
-        </ul>
+        <div className='container'>
+      <div className=" rounded-4">
+        <h2 className="text-center text-light mb-4">Buy a Pet</h2>
+        <form>
+          {/* Pet Type Section */}
+          <div className="row mb-3">
+            <label htmlFor="petType" className="col-sm-4 col-form-label text-end text-light fs-5">
+              Pet Type:
+            </label>
+            <div className="col-sm-8">
+              <select className="form-select" id="petType">
+                <option selected>Select a pet type</option>
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="rabbit">Rabbit</option>
+                <option value="bird">Bird</option>
+              </select>
+            </div>
+          </div>
+
+          {/* Pet Name Section */}
+          <div className="row mb-3">
+            <label htmlFor="petName" className="col-sm-4 col-form-label text-end text-light fs-5">
+              Pet Name:
+            </label>
+            <div className="col-sm-8">
+              <input
+                type="text"
+                className="form-control"
+                id="petName"
+                placeholder="Enter the pet's name"
+                required
+              />
+            </div>
+          </div>
+
+          {/* Pet Age Section */}
+          <div className="row mb-3">
+            <label htmlFor="petAge" className="col-sm-4 col-form-label text-end text-light fs-5">
+              Pet Age:
+            </label>
+            <div className="col-sm-8">
+              <input
+                type="number"
+                className="form-control"
+                id="petAge"
+                placeholder="Enter the pet's age"
+                required
+              />
+            </div>
+          </div>
+
+          {/* Pet Breed Section */}
+          <div className="row mb-3">
+            <label htmlFor="petBreed" className="col-sm-4 col-form-label text-end text-light fs-5">
+              Pet Breed:
+            </label>
+            <div className="col-sm-8">
+              <input
+                type="text"
+                className="form-control"
+                id="petBreed"
+                placeholder="Enter the pet's breed"
+                required
+              />
+            </div>
+          </div>
+
+          {/* Pet Description Section */}
+          <div className="row mb-3">
+            <label htmlFor="petDescription" className="col-sm-4 col-form-label text-end text-light fs-5">
+              Pet Description:
+            </label>
+            <div className="col-sm-8">
+              <textarea
+                className="form-control"
+                id="petDescription"
+                rows="3"
+                placeholder="Describe the pet's personality and background"
+                required
+              ></textarea>
+            </div>
+          </div>
+
+          {/* Contact Information Section */}
+          <div className="row mb-3">
+            <label htmlFor="contactInfo" className="col-sm-4 col-form-label text-end text-light fs-5">
+              Contact Information:
+            </label>
+            <div className="col-sm-8">
+              <input
+                type="text"
+                className="form-control"
+                id="contactInfo"
+                placeholder="Enter your contact details (email/phone)"
+                required
+              />
+            </div>
+          </div>
+
+          {/* Submit Button */}
+          <div className="row mb-3">
+            <div className="col-sm-12">
+              <button type="submit" className="btn btn-success w-100">
+                Submit Purchase Request
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
     );
 };
 

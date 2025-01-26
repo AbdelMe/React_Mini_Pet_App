@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import { Link} from "react-router-dom";
-// import Adopt from "./components/Adopt";
-// import Content from "./Content";
+import { Link } from "react-router-dom";
 
 function Sidebar({ children }) {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -24,7 +22,7 @@ function Sidebar({ children }) {
       path: "/buy",
     },
     {
-      name: "Search for Pet",
+      name: "Search Pet",
       icon: "../assets/Icons/search.png",
       path: "/search",
     },
@@ -39,10 +37,15 @@ function Sidebar({ children }) {
       icon: "../assets/Icons/stethoscope.png",
       path: "/vet",
     },
+    {
+      name: "Advices",
+      icon: "../assets/Icons/shopping-bag.png",
+      path: "/vet",
+    }
   ];
 
   return (
-    <div className="d-flex mt-3">
+    <div className="d-flex mt-4">
       {/* Sidebar */}
       <div
         className={`text-white ${
@@ -57,13 +60,13 @@ function Sidebar({ children }) {
         >
           {isCollapsed ? (
             <img
-              src="../assets/Icons/right-arrow.png" // Add your expand icon here
+              src="../assets/Icons/right-arrow.png"
               alt="Expand Sidebar"
               style={{ width: "30px", height: "30px", cursor: "pointer" }}
             />
           ) : (
             <img
-              src="../assets/Icons/left-arrow.png" // Add your collapse icon here
+              src="../assets/Icons/left-arrow.png"
               alt="Collapse Sidebar"
               style={{ width: "30px", height: "30px", cursor: "pointer" }}
             />
@@ -74,17 +77,19 @@ function Sidebar({ children }) {
             <li key={index} className="nav-item">
               <Link
                 to={item.path}
-                className="nav-link text-white d-flex align-items-center justify-content-center fs-5"
+                className="nav-link text-white d-flex align-items-center justify-content-start fs-5"
               >
-                {isCollapsed ? (
-                  <img
-                    src={item.icon}
-                    alt={item.name}
-                    style={{ width: "30px", height: "30px" }}
-                  />
-                ) : (
-                  item.name
-                )}
+                <img
+                  src={item.icon}
+                  alt={item.name}
+                  title={item.name}
+                  style={{
+                    width: "30px",
+                    height: "30px",
+                    marginRight: isCollapsed ? "0" : "10px",
+                  }}
+                />
+                {!isCollapsed && <span>{item.name}</span>}
               </Link>
             </li>
           ))}
@@ -92,15 +97,14 @@ function Sidebar({ children }) {
       </div>
 
       {/* Main Content */}
-      {children && 
-      <div className="col p-4 w-75 mx-4 text-center rounded-4 content">
-      {/* <Routes>
-            <Route path='/adopt' element={<Adopt></Adopt>}></Route>
-          </Routes> */}
-      {children}
-    </div>}
-      {/* <Content></Content> */}
+      {children && (
+        <div className="col p-4 w-75 mx-4 text-center rounded-4 content">
+          {children}
+        </div>
+      )}
+      {/* <footer className="text-light">©️2025</footer> */}
     </div>
+    
   );
 }
 

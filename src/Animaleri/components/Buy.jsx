@@ -7,117 +7,121 @@ export default function Buy() {
 
     <Sidebar>
 
-    <div className='container'>
-      <div className=" rounded-4">
-        <h2 className="text-center text-light mb-4">Buy a Pet</h2>
-        <form>
-          {/* Pet Type Section */}
-          <div className="row mb-3">
-            <label htmlFor="petType" className="col-sm-4 col-form-label text-end text-light fs-5">
-              Pet Type:
-            </label>
-            <div className="col-sm-8">
-              <select className="form-select" id="petType">
-                <option selected>Select a pet type</option>
-                <option value="dog">Dog</option>
-                <option value="cat">Cat</option>
-                <option value="rabbit">Rabbit</option>
-                <option value="bird">Bird</option>
-              </select>
+    <h1 className="text-light">Buy a Pet</h1>
+        {/* <div className="container mb-5 d-flex justify-content-center">
+          <form
+            className="input-group"
+            style={{ maxWidth: "600px", width: "100%" }}
+          >
+            <input
+              type="text"
+              id="searchInput"
+              className="form-control"
+              placeholder="Search for a pet by name, type, or breed..."
+              aria-label="Search"
+            />
+            <button className="btn btn-primary" type="submit">
+              Search
+            </button>
+          </form>
+        </div> */}
+        <div className="d-flex justify-content-evenly">
+          <div className="card rounded-4 bg-black text-light" style={{ width: "14rem" }}>
+            {/* Pet Image */}
+            <img
+              src="../assets/PitPic/cat.jpg"
+              alt=""
+              className="card-img-top rounded-top-4 "
+              style={{ height: "10rem", objectFit: "cover" }}
+            />
+            {/* Card Body */}
+            <div className="card-body">
+              <h5 className="card-title text-primary">{}</h5>
+              <p className="card-text">
+                <strong>Type:</strong> {}
+              </p>
+              <p className="card-text">
+                <strong>Age:</strong> old
+              </p>
+              <p className="card-text">
+                <strong>Description:</strong>
+              </p>
+              <button className="btn btn-success w-100">Buy {}</button>
             </div>
           </div>
 
-          {/* Pet Name Section */}
-          <div className="row mb-3">
-            <label htmlFor="petName" className="col-sm-4 col-form-label text-end text-light fs-5">
-              Pet Name:
-            </label>
-            <div className="col-sm-8">
-              <input
-                type="text"
-                className="form-control"
-                id="petName"
-                placeholder="Enter the pet's name"
-                required
-              />
+          <div className="card rounded-4 bg-black text-light" style={{ width: "16rem" }}>
+            {/* Pet Image */}
+            <img
+              src="../assets/PitPic/dog.jpg"
+              alt=""
+              className="card-img-top rounded-top-4 "
+              style={{ height: "10rem", objectFit: "cover" }}
+            />
+            {/* Card Body */}
+            <div className="card-body">
+              <h5 className="card-title text-primary">{}</h5>
+              <p className="card-text">
+                <strong>Type:</strong> {}
+              </p>
+              <p className="card-text">
+                <strong>Age:</strong> old
+              </p>
+              <p className="card-text">
+                <strong>Description:</strong>
+              </p>
+              <button className="btn btn-success w-100">Buy {}</button>
             </div>
           </div>
 
-          {/* Pet Age Section */}
-          <div className="row mb-3">
-            <label htmlFor="petAge" className="col-sm-4 col-form-label text-end text-light fs-5">
-              Pet Age:
-            </label>
-            <div className="col-sm-8">
-              <input
-                type="number"
-                className="form-control"
-                id="petAge"
-                placeholder="Enter the pet's age"
-                required
-              />
+          <div className="card rounded-4 bg-black text-light" style={{ width: "16rem" }}>
+            {/* Pet Image */}
+            <img
+              src="../assets/PitPic/rabbit.jpg"
+              alt=""
+              className="card-img-top rounded-top-4 "
+              style={{ height: "10rem", objectFit: "cover" }}
+            />
+            {/* Card Body */}
+            <div className="card-body">
+              <h5 className="card-title text-primary">{}</h5>
+              <p className="card-text">
+                <strong>Type:</strong> {}
+              </p>
+              <p className="card-text">
+                <strong>Age:</strong> old
+              </p>
+              <p className="card-text">
+                <strong>Description:</strong>
+              </p>
+              <button className="btn btn-success w-100">Buy {}</button>
             </div>
           </div>
 
-          {/* Pet Breed Section */}
-          <div className="row mb-3">
-            <label htmlFor="petBreed" className="col-sm-4 col-form-label text-end text-light fs-5">
-              Pet Breed:
-            </label>
-            <div className="col-sm-8">
-              <input
-                type="text"
-                className="form-control"
-                id="petBreed"
-                placeholder="Enter the pet's breed"
-                required
-              />
+          <div className="card rounded-4 bg-black text-light" style={{ width: "16rem" }}>
+            {/* Pet Image */}
+            <img
+              src="../assets/PitPic/bird.jpg"
+              alt=""
+              className="card-img-top rounded-top-4 "
+              style={{ height: "10rem", objectFit: "cover" }}
+            />
+            {/* Card Body */}
+            <div className="card-body">
+              <h5 className="card-title text-primary">{}</h5>
+              <p className="card-text">
+                <strong>Type:</strong> {}
+              </p>
+              <p className="card-text">
+                <strong>Age:</strong> old
+              </p>
+              <p className="card-text">
+                <strong>Description:</strong>
+              </p>
+              <button className="btn btn-success w-100">Buy {}</button>
             </div>
           </div>
-
-          {/* Pet Description Section */}
-          <div className="row mb-3">
-            <label htmlFor="petDescription" className="col-sm-4 col-form-label text-end text-light fs-5">
-              Pet Description:
-            </label>
-            <div className="col-sm-8">
-              <textarea
-                className="form-control"
-                id="petDescription"
-                rows="3"
-                placeholder="Describe the pet's personality and background"
-                required
-              ></textarea>
-            </div>
-          </div>
-
-          {/* Contact Information Section */}
-          <div className="row mb-3">
-            <label htmlFor="contactInfo" className="col-sm-4 col-form-label text-end text-light fs-5">
-              Contact Information:
-            </label>
-            <div className="col-sm-8">
-              <input
-                type="text"
-                className="form-control"
-                id="contactInfo"
-                placeholder="Enter your contact details (email/phone)"
-                required
-              />
-            </div>
-          </div>
-
-          {/* Submit Button */}
-          <div className="row mb-3">
-            <div className="col-sm-12">
-              <button type="submit" className="btn btn-success w-100">
-                Submit Purchase Request
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
+        </div>
     </Sidebar>
       
     </>
