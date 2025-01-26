@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Sidebar from "../Home";
+import Sidebar from "../../Home";
 import { StrictMode } from "react";
 
 export default function Adopt() {
-  const [checkBtn, SetBtn] = useState();
+  const [checkBtn, SetBtn] = useState(undefined);
   return (
     <>
       <Sidebar>
@@ -84,7 +84,7 @@ export default function Adopt() {
                 </label>
                 <div className="col-sm-3">
                   <input
-                  type="color"
+                    type="color"
                     className="form-control"
                     id="PetColor"
                     rows="3"
@@ -100,7 +100,7 @@ export default function Adopt() {
                 </label>
                 <div className="col-sm-2">
                   <input
-                  type="text"
+                    type="text"
                     className="form-control"
                     id="PetColor"
                     placeholder="Pet Weight"
@@ -110,11 +110,8 @@ export default function Adopt() {
                 </div>
               </div>
 
-
               {/* Pet Description Section */}
-              <div className="row mb-3 d-flex align-items-center">
-
-              </div>
+              <div className="row mb-3 d-flex align-items-center"></div>
 
               {/* Pet Breed Section */}
               <div className="row mb-3 d-flex align-items-center">
@@ -125,7 +122,7 @@ export default function Adopt() {
                   Food Time:
                 </label>
                 <div className="col-sm-2 d-flex justify-content-center align-items-center">
-                <span className="text-light fs-6 mx-2">Breakfast:</span>
+                  <span className="text-light fs-6 mx-2">Breakfast:</span>
                   <input
                     type="time"
                     className="form-control"
@@ -134,7 +131,7 @@ export default function Adopt() {
                   />
                 </div>
                 <div className="col-sm-2 d-flex justify-content-center align-items-center">
-                <span className="text-light fs-6 mx-2">Lanche:</span>
+                  <span className="text-light fs-6 mx-2">Lanche:</span>
                   <input
                     type="time"
                     className="form-control"
@@ -143,7 +140,7 @@ export default function Adopt() {
                   />
                 </div>
                 <div className="col-sm-2 d-flex justify-content-center align-items-center">
-                <span className="text-light fs-6 mx-2">Diner:</span>
+                  <span className="text-light fs-6 mx-2">Diner:</span>
                   <input
                     type="time"
                     className="form-control"
@@ -181,6 +178,118 @@ export default function Adopt() {
                 </div>
               </div>
             </form>
+          </>
+        ) : checkBtn === false ? (
+          <>
+            <div className="d-flex justify-content-evenly mt-4">
+              <div
+                className="card rounded-4 bg-black text-light"
+                style={{ width: "14rem" }}
+              >
+                {/* Pet Image */}
+                <img
+                  src="../assets/PitPic/cat.jpg"
+                  alt=""
+                  className="card-img-top rounded-top-4 "
+                  style={{ height: "10rem", objectFit: "cover" }}
+                />
+                {/* Card Body */}
+                <div className="card-body">
+                  <h5 className="card-title text-primary">{}</h5>
+                  <p className="card-text">
+                    <strong>Type:</strong> {}
+                  </p>
+                  <p className="card-text">
+                    <strong>Age:</strong> old
+                  </p>
+                  <p className="card-text">
+                    <strong>Description:</strong>
+                  </p>
+                  <button className="btn btn-warning w-100">Adopt {}</button>
+                </div>
+              </div>
+
+              <div
+                className="card rounded-4 bg-black text-light"
+                style={{ width: "16rem" }}
+              >
+                {/* Pet Image */}
+                <img
+                  src="../assets/PitPic/dog.jpg"
+                  alt=""
+                  className="card-img-top rounded-top-4 "
+                  style={{ height: "10rem", objectFit: "cover" }}
+                />
+                {/* Card Body */}
+                <div className="card-body">
+                  <h5 className="card-title text-primary">{}</h5>
+                  <p className="card-text">
+                    <strong>Type:</strong> {}
+                  </p>
+                  <p className="card-text">
+                    <strong>Age:</strong> old
+                  </p>
+                  <p className="card-text">
+                    <strong>Description:</strong>
+                  </p>
+                  <button className="btn btn-warning w-100">Adopt {}</button>
+                </div>
+              </div>
+
+              <div
+                className="card rounded-4 bg-black text-light"
+                style={{ width: "16rem" }}
+              >
+                {/* Pet Image */}
+                <img
+                  src="../assets/PitPic/rabbit.jpg"
+                  alt=""
+                  className="card-img-top rounded-top-4 "
+                  style={{ height: "10rem", objectFit: "cover" }}
+                />
+                {/* Card Body */}
+                <div className="card-body">
+                  <h5 className="card-title text-primary">{}</h5>
+                  <p className="card-text">
+                    <strong>Type:</strong> {}
+                  </p>
+                  <p className="card-text">
+                    <strong>Age:</strong> old
+                  </p>
+                  <p className="card-text">
+                    <strong>Description:</strong>
+                  </p>
+                  <button className="btn btn-warning w-100">Adopt {}</button>
+                </div>
+              </div>
+
+              <div
+                className="card rounded-4 bg-black text-light"
+                style={{ width: "16rem" }}
+              >
+                {/* Pet Image */}
+                <img
+                  src="../assets/PitPic/bird.jpg"
+                  alt=""
+                  className="card-img-top rounded-top-4 "
+                  style={{ height: "10rem", objectFit: "cover" }}
+                />
+                {/* Card Body */}
+                <div className="card-body">
+                  <h5 className="card-title text-primary">{}</h5>
+                  <p className="card-text">
+                    <strong>Type:</strong> {}
+                  </p>
+                  <p className="card-text">
+                    <strong>Age:</strong> old
+                  </p>
+                  <p className="card-text">
+                    <strong>Description:</strong>
+                  </p>
+                  <button className="btn btn-warning w-100">Adopt {}</button>
+                </div>
+              </div>
+            </div>
           </>
         ) : (
           ""

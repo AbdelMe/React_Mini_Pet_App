@@ -1,17 +1,16 @@
 import React from "react";
-import Sidebar from "../Home";
+import Sidebar from "../../Home";
 
-export default function Search() {
+export default function Buy() {
   return (
     <>
       <Sidebar>
-        <h1 className="text-light">Search For a Pet</h1>
-        <div className="container mb-5 d-flex justify-content-center">
+        <h1 className="text-light">Buy a Pet</h1>
+        {/* <div className="container mb-5 d-flex justify-content-center">
           <form
             className="input-group"
             style={{ maxWidth: "600px", width: "100%" }}
           >
-            {/* Search Input */}
             <input
               type="text"
               id="searchInput"
@@ -19,14 +18,16 @@ export default function Search() {
               placeholder="Search for a pet by name, type, or breed..."
               aria-label="Search"
             />
-            {/* Search Button */}
             <button className="btn btn-primary" type="submit">
               Search
             </button>
           </form>
-        </div>
-        <div className="d-flex justify-content-evenly">
-          <div className="card rounded-4 bg-black text-light" style={{ width: "14rem" }}>
+        </div> */}
+        <div className="d-flex justify-content-evenly mt-4">
+          <div
+            className="card rounded-4 bg-black text-light"
+            style={{ width: "14rem" }}
+          >
             {/* Pet Image */}
             <img
               src="../assets/PitPic/cat.jpg"
@@ -46,11 +47,14 @@ export default function Search() {
               <p className="card-text">
                 <strong>Description:</strong>
               </p>
-              <button className="btn btn-success w-100">Available {}</button>
+              <button className="btn btn-success w-100">Buy {}</button>
             </div>
           </div>
 
-          <div className="card rounded-4 bg-black text-light" style={{ width: "16rem" }}>
+          <div
+            className="card rounded-4 bg-black text-light"
+            style={{ width: "16rem" }}
+          >
             {/* Pet Image */}
             <img
               src="../assets/PitPic/dog.jpg"
@@ -70,11 +74,14 @@ export default function Search() {
               <p className="card-text">
                 <strong>Description:</strong>
               </p>
-              <button className="btn btn-success w-100">Available {}</button>
+              <button className="btn btn-success w-100">Buy {}</button>
             </div>
           </div>
 
-          <div className="card rounded-4 bg-black text-light" style={{ width: "16rem" }}>
+          <div
+            className="card rounded-4 bg-black text-light"
+            style={{ width: "16rem" }}
+          >
             {/* Pet Image */}
             <img
               src="../assets/PitPic/rabbit.jpg"
@@ -94,11 +101,14 @@ export default function Search() {
               <p className="card-text">
                 <strong>Description:</strong>
               </p>
-              <button className="btn btn-success w-100">Available {}</button>
+              <button className="btn btn-success w-100">Buy {}</button>
             </div>
           </div>
 
-          <div className="card rounded-4 bg-black text-light" style={{ width: "16rem" }}>
+          <div
+            className="card rounded-4 bg-black text-light"
+            style={{ width: "16rem" }}
+          >
             {/* Pet Image */}
             <img
               src="../assets/PitPic/bird.jpg"
@@ -118,7 +128,7 @@ export default function Search() {
               <p className="card-text">
                 <strong>Description:</strong>
               </p>
-              <button className="btn btn-success w-100">Available {}</button>
+              <button className="btn btn-success w-100">Buy {}</button>
             </div>
           </div>
         </div>

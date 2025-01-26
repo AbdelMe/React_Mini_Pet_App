@@ -1,32 +1,29 @@
-import React from 'react'
-import Sidebar from '../Home'
+import React from "react";
+import Sidebar from "../../Home";
 
-export default function Buy() {
+export default function Food() {
   return (
     <>
-
-    <Sidebar>
-
-    <h1 className="text-light">Buy a Pet</h1>
-        {/* <div className="container mb-5 d-flex justify-content-center">
-          <form
-            className="input-group"
-            style={{ maxWidth: "600px", width: "100%" }}
-          >
-            <input
-              type="text"
-              id="searchInput"
-              className="form-control"
-              placeholder="Search for a pet by name, type, or breed..."
-              aria-label="Search"
-            />
-            <button className="btn btn-primary" type="submit">
-              Search
-            </button>
-          </form>
-        </div> */}
+      <Sidebar>
+        <div className="row mb-3 d-flex align-items-center">
+          <label htmlFor="petType" className="col-sm-2  text-light fs-5">
+            Pet Type:
+          </label>
+          <div className="col-sm-4">
+            <select className="form-select" id="petType">
+              <option selected>Select a pet type</option>
+              <option value="dog">Dog</option>
+              <option value="cat">Cat</option>
+              <option value="rabbit">Rabbit</option>
+              <option value="bird">Bird</option>
+            </select>
+          </div>
+        </div>
         <div className="d-flex justify-content-evenly">
-          <div className="card rounded-4 bg-black text-light" style={{ width: "14rem" }}>
+          <div
+            className="card rounded-4 bg-black text-light"
+            style={{ width: "14rem" }}
+          >
             {/* Pet Image */}
             <img
               src="../assets/PitPic/cat.jpg"
@@ -50,7 +47,10 @@ export default function Buy() {
             </div>
           </div>
 
-          <div className="card rounded-4 bg-black text-light" style={{ width: "16rem" }}>
+          <div
+            className="card rounded-4 bg-black text-light"
+            style={{ width: "16rem" }}
+          >
             {/* Pet Image */}
             <img
               src="../assets/PitPic/dog.jpg"
@@ -74,7 +74,10 @@ export default function Buy() {
             </div>
           </div>
 
-          <div className="card rounded-4 bg-black text-light" style={{ width: "16rem" }}>
+          <div
+            className="card rounded-4 bg-black text-light"
+            style={{ width: "16rem" }}
+          >
             {/* Pet Image */}
             <img
               src="../assets/PitPic/rabbit.jpg"
@@ -98,7 +101,10 @@ export default function Buy() {
             </div>
           </div>
 
-          <div className="card rounded-4 bg-black text-light" style={{ width: "16rem" }}>
+          <div
+            className="card rounded-4 bg-black text-light"
+            style={{ width: "16rem" }}
+          >
             {/* Pet Image */}
             <img
               src="../assets/PitPic/bird.jpg"
@@ -122,8 +128,7 @@ export default function Buy() {
             </div>
           </div>
         </div>
-    </Sidebar>
-      
+      </Sidebar>
     </>
-  )
+  );
 }

@@ -2,6 +2,7 @@ body{
     width: 100%;
     margin: 0;
     padding: 0;
+    color: white;
     /* background-color: #65CCB8; */
     /* background-color: #57BA98; */
     background-image: url('../Pictures/wallpaperflare.com_wallpaper\ \(5\).jpg');
@@ -42,7 +43,7 @@ body{
 } */
 
 /* Scroll Style */
-/* ::-webkit-scrollbar{
+::-webkit-scrollbar{
     width: 8px;
 }
 ::-webkit-scrollbar-track{
@@ -51,4 +52,4 @@ body{
 ::-webkit-scrollbar-thumb{
     background: linear-gradient(#642bff,#14afaa);
     border-radius: 1px;
-} */
+}

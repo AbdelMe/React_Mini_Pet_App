@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Adopt from "./components/Adopt";
+import Adopt from "./components/PetDetails/Adopt";
 
 export default function Content() {
   return (

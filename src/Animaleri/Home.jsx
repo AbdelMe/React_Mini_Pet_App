@@ -3,7 +3,7 @@ import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 
 function Sidebar({ children }) {
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
 
   const toggleSidebar = () => {
     setIsCollapsed(!isCollapsed);
@@ -40,8 +40,8 @@ function Sidebar({ children }) {
     {
       name: "Advices",
       icon: "../assets/Icons/shopping-bag.png",
-      path: "/vet",
-    }
+      path: "/advices",
+    },
   ];
 
   return (
@@ -77,7 +77,11 @@ function Sidebar({ children }) {
             <li key={index} className="nav-item">
               <Link
                 to={item.path}
-                className="nav-link text-white d-flex align-items-center justify-content-start fs-5"
+                className={`nav-link text-white d-flex align-items-center ${
+                  isCollapsed
+                    ? "justify-content-center"
+                    : "justify-content-start"
+                } fs-5`}
               >
                 <img
                   src={item.icon}
@@ -104,7 +108,6 @@ function Sidebar({ children }) {
       )}
       {/* <footer className="text-light">©️2025</footer> */}
     </div>
-    
   );
 }
 

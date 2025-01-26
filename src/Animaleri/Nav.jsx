@@ -9,7 +9,7 @@ export default function Nav(){
         <>
             <div className="py-3 text-primary rounded-5 container w-50 NavDiv">
                 <ul className='d-flex justify-content-around px-0 m-0 rounded'>
-                    <Link to='/Home' className="text-light text-decoration-none">Home</Link>
+                    <Link to='/' className="text-light text-decoration-none">Home</Link>
                     <Link to='/PetOwner' className="text-light text-decoration-none">Pet Owner</Link>
                     <Link to='/PetDetails' className="text-light text-decoration-none">Pet Details</Link>
                     <Link to='/About' className="text-light text-decoration-none">About</Link>
