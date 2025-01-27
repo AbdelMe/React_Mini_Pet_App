@@ -14,26 +14,30 @@ import Food from './Animaleri/components/PetDetails/Food';
 import Disease from './Animaleri/components/PetDetails/Disease';
 import Veterinarian from './Animaleri/components/PetDetails/Veterinarian';
 import Advices from './Animaleri/components/PetDetails/Advices';
+import { Provider } from 'react-redux';
+import StoreToolkit from './Animaleri/ReduxToolkit/Store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <BrowserRouter>
-        <Nav></Nav>
-        <Routes>
-            <Route path='/' element={<Home1></Home1>}></Route>
-            <Route path='/PetDetails' element={<Home></Home>}></Route>
-            <Route path='/PetOwner' element={<PetOwner></PetOwner>}></Route>
-            <Route path='/About' element={<About></About>}></Route>
-            {/* <Route path='/Header' element={<Header></Header>}></Route> */}
-        </Routes>
-        <Routes>
-        <Route path='/adopt' element={<Adopt></Adopt>}></Route>
-        <Route path='/buy' element={<Buy></Buy>}></Route>
-        <Route path='/search' element={<Search></Search>}></Route>
-        <Route path='/food' element={<Food></Food>}></Route>
-        <Route path='/disease' element={<Disease></Disease>}></Route>
-        <Route path='/vet' element={<Veterinarian></Veterinarian>}></Route>
-        <Route path='/advices' element={<Advices></Advices>}></Route>
-        </Routes>
-    </BrowserRouter>
+    <Provider store={StoreToolkit}>
+        <BrowserRouter>
+            <Nav></Nav>
+            <Routes>
+                <Route path='/' element={<Home1></Home1>}></Route>
+                <Route path='/PetDetails' element={<Home></Home>}></Route>
+                <Route path='/PetOwner' element={<PetOwner></PetOwner>}></Route>
+                <Route path='/About' element={<About></About>}></Route>
+            </Routes>
+
+            <Routes>
+                <Route path='/adopt' element={<Adopt></Adopt>}></Route>
+                <Route path='/buy' element={<Buy></Buy>}></Route>
+                <Route path='/search' element={<Search></Search>}></Route>
+                <Route path='/food' element={<Food></Food>}></Route>
+                <Route path='/disease' element={<Disease></Disease>}></Route>
+                <Route path='/vet' element={<Veterinarian></Veterinarian>}></Route>
+                <Route path='/advices' element={<Advices></Advices>}></Route>
+            </Routes>
+        </BrowserRouter>
+    </Provider>
 );

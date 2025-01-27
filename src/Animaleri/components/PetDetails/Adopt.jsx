@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import Sidebar from "../../Home";
-import { StrictMode } from "react";
+import { useSelector } from "react-redux";
+// import { StrictMode } from "react";
 
 export default function Adopt() {
+  const data = useSelector((state) => state.Compt.DataBase.Pets);
   const [checkBtn, SetBtn] = useState(undefined);
   return (
     <>
@@ -74,6 +76,9 @@ export default function Adopt() {
                 </div>
               </div>
 
+              {/* Pet Name Section */}
+              <div className="row mb-3"></div>
+
               {/* Pet Description Section */}
               <div className="row mb-3 d-flex align-items-center">
                 <label
@@ -82,7 +87,7 @@ export default function Adopt() {
                 >
                   Pet color:
                 </label>
-                <div className="col-sm-3">
+                <div className="col-sm-1">
                   <input
                     type="color"
                     className="form-control"
@@ -94,19 +99,35 @@ export default function Adopt() {
 
                 <label
                   htmlFor="petColor"
-                  className="col-sm-2 col-form-label text-end text-light fs-5"
+                  className="col-sm-1 text-start text-light fs-5"
                 >
-                  Pet Weight:
+                  Weight:
                 </label>
                 <div className="col-sm-2">
                   <input
                     type="text"
-                    className="form-control"
+                    className="form-control "
                     id="PetColor"
-                    placeholder="Pet Weight"
+                    placeholder="Weight"
                     rows="3"
                     required
                   ></input>
+                </div>
+
+                <label
+                  htmlFor="petName"
+                  className="col-sm-1 text-start text-light fs-5"
+                >
+                  Picture:
+                </label>
+                <div className="col-sm-2 ">
+                  <input
+                    type="file"
+                    className="form-control"
+                    id="petName"
+                    placeholder="Enter the pet's name"
+                    required
+                  />
                 </div>
               </div>
 
@@ -151,7 +172,7 @@ export default function Adopt() {
               </div>
 
               {/* Contact Information Section */}
-              <div className="row mb-3">
+              {/* <div className="row mb-3">
                 <label
                   htmlFor="contactInfo"
                   className="col-sm-4 col-form-label text-end text-light fs-5"
@@ -167,7 +188,7 @@ export default function Adopt() {
                     required
                   />
                 </div>
-              </div>
+              </div> */}
 
               {/* Submit Button */}
               <div className="row mb-3">
@@ -182,113 +203,40 @@ export default function Adopt() {
         ) : checkBtn === false ? (
           <>
             <div className="d-flex justify-content-evenly mt-4">
-              <div
-                className="card rounded-4 bg-black text-light"
-                style={{ width: "14rem" }}
-              >
-                {/* Pet Image */}
-                <img
-                  src="../assets/PitPic/cat.jpg"
-                  alt=""
-                  className="card-img-top rounded-top-4 "
-                  style={{ height: "10rem", objectFit: "cover" }}
-                />
-                {/* Card Body */}
-                <div className="card-body">
-                  <h5 className="card-title text-primary">{}</h5>
-                  <p className="card-text">
-                    <strong>Type:</strong> {}
-                  </p>
-                  <p className="card-text">
-                    <strong>Age:</strong> old
-                  </p>
-                  <p className="card-text">
-                    <strong>Description:</strong>
-                  </p>
-                  <button className="btn btn-warning w-100">Adopt {}</button>
-                </div>
-              </div>
-
-              <div
-                className="card rounded-4 bg-black text-light"
-                style={{ width: "16rem" }}
-              >
-                {/* Pet Image */}
-                <img
-                  src="../assets/PitPic/dog.jpg"
-                  alt=""
-                  className="card-img-top rounded-top-4 "
-                  style={{ height: "10rem", objectFit: "cover" }}
-                />
-                {/* Card Body */}
-                <div className="card-body">
-                  <h5 className="card-title text-primary">{}</h5>
-                  <p className="card-text">
-                    <strong>Type:</strong> {}
-                  </p>
-                  <p className="card-text">
-                    <strong>Age:</strong> old
-                  </p>
-                  <p className="card-text">
-                    <strong>Description:</strong>
-                  </p>
-                  <button className="btn btn-warning w-100">Adopt {}</button>
-                </div>
-              </div>
-
-              <div
-                className="card rounded-4 bg-black text-light"
-                style={{ width: "16rem" }}
-              >
-                {/* Pet Image */}
-                <img
-                  src="../assets/PitPic/rabbit.jpg"
-                  alt=""
-                  className="card-img-top rounded-top-4 "
-                  style={{ height: "10rem", objectFit: "cover" }}
-                />
-                {/* Card Body */}
-                <div className="card-body">
-                  <h5 className="card-title text-primary">{}</h5>
-                  <p className="card-text">
-                    <strong>Type:</strong> {}
-                  </p>
-                  <p className="card-text">
-                    <strong>Age:</strong> old
-                  </p>
-                  <p className="card-text">
-                    <strong>Description:</strong>
-                  </p>
-                  <button className="btn btn-warning w-100">Adopt {}</button>
-                </div>
-              </div>
-
-              <div
-                className="card rounded-4 bg-black text-light"
-                style={{ width: "16rem" }}
-              >
-                {/* Pet Image */}
-                <img
-                  src="../assets/PitPic/bird.jpg"
-                  alt=""
-                  className="card-img-top rounded-top-4 "
-                  style={{ height: "10rem", objectFit: "cover" }}
-                />
-                {/* Card Body */}
-                <div className="card-body">
-                  <h5 className="card-title text-primary">{}</h5>
-                  <p className="card-text">
-                    <strong>Type:</strong> {}
-                  </p>
-                  <p className="card-text">
-                    <strong>Age:</strong> old
-                  </p>
-                  <p className="card-text">
-                    <strong>Description:</strong>
-                  </p>
-                  <button className="btn btn-warning w-100">Adopt {}</button>
-                </div>
-              </div>
+              {data.map((pet) => {
+                return (
+                  <>
+                    <div
+                      className="card rounded-4 bg-black text-light"
+                      style={{ width: "14rem" }}
+                    >
+                      {/* Pet Image */}
+                      <img
+                        src={pet.pic}
+                        alt=""
+                        className="card-img-top rounded-top-4 "
+                        style={{ height: "10rem", objectFit: "cover" }}
+                      />
+                      {/* Card Body */}
+                      <div className="card-body">
+                        <h5 className="card-title text-primary">{}</h5>
+                        <p className="card-text">
+                          <strong>Type: </strong> {pet.type}
+                        </p>
+                        <p className="card-text">
+                          <strong>Name: </strong> {pet.name}
+                        </p>
+                        <p className="card-text">
+                          <strong>Age: </strong> {pet.age}
+                        </p>
+                        <button className="btn btn-warning w-100">
+                          Adopt {}
+                        </button>
+                      </div>
+                    </div>
+                  </>
+                );
+              })}
             </div>
           </>
         ) : (
