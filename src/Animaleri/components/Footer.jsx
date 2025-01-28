@@ -1,4 +1,9 @@
 import React from "react";
+import Linkedin from '../Icons/linkedin.png'
+import Face from '../Icons/facebook.png'
+import Insta from '../Icons/instagram.png'
+import Teleg from '../Icons/telegram.png'
+import Twitt from '../Icons/twitter.png'
 
 export default function Footer() {
   return (
@@ -10,13 +15,19 @@ export default function Footer() {
           <p>Follow us on social media:</p>
           <div>
             <a href="#" className="text-light me-3">
-              <i className="bi bi-facebook"></i>
+            <img src={Face} width={35} alt="" />
             </a>
             <a href="#" className="text-light me-3">
-              <i className="bi bi-twitter"></i>
+            <img src={Insta} width={35} alt="" />
             </a>
             <a href="#" className="text-light me-3">
-              <i className="bi bi-instagram"></i>
+              <img src={Linkedin} width={35} alt="" />
+            </a>
+            <a href="#" className="text-light me-3">
+              <img src={Teleg} width={35} alt="" />
+            </a>
+            <a href="#" className="text-light me-3">
+              <img src={Twitt} width={35} alt="" />
             </a>
           </div>
         </div>

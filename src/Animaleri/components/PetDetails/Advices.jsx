@@ -31,7 +31,6 @@ export default function PetAdvice() {
 
   return (
     <Sidebar>
-    <h1>Some Advices For Your Pet</h1>
     <div className="container">
       <div className="text-center mb-4">
         <p className="text-success fw-bold">PET CARE ADVICE</p>
