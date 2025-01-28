@@ -9,12 +9,12 @@ export default function Buy() {
     <>
       <Sidebar>
         <h1 className="text-light">Buy a Pet</h1>
-        <div className="d-flex justify-content-evenly mt-4">
+        <div className="d-flex justify-content-center mt-4">
               {data.map((pet) => {
                 return (
                   <>
                     <div
-                      className="card rounded-4 bg-black text-light"
+                      className="card rounded-4 bg-black text-light mx-3"
                       style={{ width: "14rem" }}
                     >
                       {/* Pet Image */}

@@ -5,6 +5,7 @@ export default function Food() {
   return (
     <>
       <Sidebar>
+        <h1>Proposed Food To your Pet </h1>
         <div className="row mb-3 d-flex align-items-center">
           <label htmlFor="petType" className="col-sm-2  text-light fs-5">
             Pet Type:

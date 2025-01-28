@@ -52,6 +52,7 @@ const data = {
           "id": 1,
           "f_name": "Aymane",
           "l_name": "harchi",
+          "pic":"../assets/VetPic/vetWomen.jpg",
           "email": "Aymane@gmail.com",
           "phone": "0617663421"
         },
@@ -59,6 +60,7 @@ const data = {
           "id": 2,
           "f_name": "Soufian",
           "l_name": "ounjli",
+          "pic":"../assets/VetPic/vetWomen.jpg",
           "email": "Soufian@gmail.com",
           "phone": "0786519871"
         },
@@ -66,6 +68,7 @@ const data = {
           "id": 3,
           "f_name": "Yassin",
           "l_name": "man3reft",
+          "pic":"../assets/VetPic/vetWomen.jpg",
           "email": "Yassin@gmail.com",
           "phone": "0733451879"
         },
@@ -73,6 +76,7 @@ const data = {
           "id": 4,
           "f_name": "Mohemmed",
           "l_name": "Abdellaoui",
+          "pic":"../assets/VetPic/vetWomen.jpg",
           "email": "Mohammed@gmail.com",
           "phone": "0613946107"
         }
