@@ -33,7 +33,7 @@ export default function Veterinarian() {
                     />
                   </td>
                   <td>{vet.email}</td>
-                  <td>{vet.phone}</td>
+                  <td>+212 {vet.phone}</td>
                   <td>
                     <a href={`mailto:${vet.email}`}><img src={phone} width={30} alt="" className="mx-1"/></a>
                     <a href={`mailto:${vet.phone}`}><img src={email} width={30} alt="" className="mx-1"/></a>

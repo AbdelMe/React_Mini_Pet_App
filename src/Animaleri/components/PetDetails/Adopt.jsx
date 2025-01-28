@@ -67,7 +67,7 @@ export default function Adopt() {
                 </label>
                 <div className="col-sm-8">
                   <input
-                    type="number"
+                    type="text"
                     className="form-control"
                     id="petAge"
                     placeholder="Enter the pet's age"
@@ -170,25 +170,6 @@ export default function Adopt() {
                   />
                 </div>
               </div>
-
-              {/* Contact Information Section */}
-              {/* <div className="row mb-3">
-                <label
-                  htmlFor="contactInfo"
-                  className="col-sm-4 col-form-label text-end text-light fs-5"
-                >
-                  Contact Information:
-                </label>
-                <div className="col-sm-8 ">
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="contactInfo"
-                    placeholder="Enter your contact details (email/phone)"
-                    required
-                  />
-                </div>
-              </div> */}
 
               {/* Submit Button */}
               <div className="row mb-3">

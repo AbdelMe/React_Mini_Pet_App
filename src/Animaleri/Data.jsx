@@ -54,7 +54,7 @@ const data = {
         l_name: "harchi",
         pic: "../assets/VetPic/vetWomen.jpg",
         email: "Aymane@gmail.com",
-        phone: "0617663421",
+        phone: "617663421",
       },
       {
         id: 2,
@@ -62,7 +62,7 @@ const data = {
         l_name: "ounjli",
         pic: "../assets/VetPic/vetWomen.jpg",
         email: "Soufian@gmail.com",
-        phone: "0786519871",
+        phone: "786519871",
       },
       {
         id: 3,
@@ -70,7 +70,7 @@ const data = {
         l_name: "man3reft",
         pic: "../assets/VetPic/vetWomen.jpg",
         email: "Yassin@gmail.com",
-        phone: "0733451879",
+        phone: "733451879",
       },
       {
         id: 4,
@@ -78,7 +78,7 @@ const data = {
         l_name: "Abdellaoui",
         pic: "../assets/VetPic/vetWomen.jpg",
         email: "Mohammed@gmail.com",
-        phone: "0613946107",
+        phone: "613946107",
       },
     ],
     Pet_Food: [

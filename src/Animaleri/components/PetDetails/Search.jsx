@@ -28,7 +28,7 @@ export default function Search() {
           {/* <button className="btn btn-primary">Search</button> */}
         </div>
 
-        <div className="d-flex mt-4 justify-content-center">
+        <div className={`d-flex mt-4 ${FiltredData.length >= 4 ? "justify-content-center" : "justify-content-start"}`}>
           {FiltredData.map((pet) => {
             return (
               <>
