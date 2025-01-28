@@ -35,6 +35,9 @@ body{
     justify-content: space-around;
     align-items: center;
 }
+.BotomSide{
+    background-color: #0D1F1F;
+}
 
 /* footer{
     position: absolute;

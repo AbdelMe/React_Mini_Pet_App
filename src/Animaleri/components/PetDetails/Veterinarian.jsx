@@ -1,48 +1,61 @@
 import { useSelector } from "react-redux";
 import Sidebar from "../../Home";
-import phone from '../../Pictures/image-gallery.png'
-import email from '../../Pictures/email.png'
+import phone from '../../Pictures/phone.png';
+import email from '../../Pictures/email.png';
 
 export default function Veterinarian() {
   const data = useSelector((state) => state.Compt.DataBase.Veterinarians);
+
   return (
     <>
       <Sidebar>
-        <h1>Available Veterinarians</h1>
-        <table border={1} className="container">
-          <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Picture</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Action</th>
-          </tr>
-          {data.map((vet) => {
-            return (
-              <>
-                <tr>
+        <div className="container mt-4">
+          <h1 className="mb-4 text-center">Available Veterinarians</h1>
+          <table className="table table-bordered table-hover table-striped table-sm">
+            <thead className="table-dark">
+              <tr>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Picture</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody className="table-dark">
+              {data.map((vet, index) => (
+                <tr key={index} style={{ height: '50px' }}>
                   <td>{vet.f_name}</td>
                   <td>{vet.l_name}</td>
                   <td>
                     <img
                       src={vet.pic}
-                      width={100}
-                      alt=""
+                      width={80}
+                      alt="Veterinarian"
                       className="rounded-4"
                     />
                   </td>
                   <td>{vet.email}</td>
                   <td>+212 {vet.phone}</td>
                   <td>
-                    <a href={`mailto:${vet.email}`}><img src={phone} width={30} alt="" className="mx-1"/></a>
-                    <a href={`mailto:${vet.phone}`}><img src={email} width={30} alt="" className="mx-1"/></a>
+                    <a
+                      href={`mailto:${vet.email}`}
+                      className="btn btn-sm"
+                    >
+                      <img src={email} width={30} alt="Email" />
+                    </a>
+                    <a
+                      href={`tel:${vet.phone}`}
+                      className="btn btn-sm"
+                    >
+                      <img src={phone} width={30} alt="Phone" />
+                    </a>
                   </td>
                 </tr>
-              </>
-            );
-          })}
-        </table>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </Sidebar>
     </>
   );
