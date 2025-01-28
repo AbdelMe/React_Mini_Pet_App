@@ -16,6 +16,7 @@ import Veterinarian from './Animaleri/components/PetDetails/Veterinarian';
 import Advices from './Animaleri/components/PetDetails/Advices';
 import { Provider } from 'react-redux';
 import StoreToolkit from './Animaleri/ReduxToolkit/Store';
+import AboutPage from './Animaleri/components/About';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -26,7 +27,7 @@ root.render(
                 <Route path='/' element={<Home1></Home1>}></Route>
                 <Route path='/PetDetails' element={<Home></Home>}></Route>
                 <Route path='/PetOwner' element={<PetOwner></PetOwner>}></Route>
-                <Route path='/About' element={<About></About>}></Route>
+                <Route path='/About' element={<AboutPage></AboutPage>}></Route>
             </Routes>
 
             <Routes>
