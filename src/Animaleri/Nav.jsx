@@ -7,7 +7,7 @@ import './Style/Nav.css'
 export default function Nav(){
     return(
         <>
-            <div className="py-3 text-primary rounded-5 container w-50 NavDiv">
+            <div className="py-3 text-primary rounded-5 container w-50 NavDiv mt-2">
                 <ul className='d-flex justify-content-around px-0 m-0 rounded'>
                     <Link to='/' className="text-light text-decoration-none">Home</Link>
                     <Link to='/PetOwner' className="text-light text-decoration-none">Pet Owner</Link>

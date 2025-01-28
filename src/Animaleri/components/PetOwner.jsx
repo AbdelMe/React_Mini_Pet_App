@@ -5,21 +5,21 @@ export default function PetOwner() {
   const owner = {
     name: "Mohammed El Abdellaoui",
     email: "Medabdel@gmail.com",
-    phone: "+123 456 789",
-    location: "New York, USA",
+    phone: "+212 644991166",
+    location: "Fes, Maroc",
     image: "https://via.placeholder.com/150",
   };
 
   const pets = [
     {
-      image: "https://via.placeholder.com/100",
+      image: "../assets/PitPic/beautiful-pet-portrait-dog.jpg",
       name: "Buddy",
       type: "Dog",
       age: "3 Years",
       description: "A playful golden retriever.",
     },
     {
-      image: "https://via.placeholder.com/100",
+      image: "../assets/PitPic/cat.jpg",
       name: "Whiskers",
       type: "Cat",
       age: "2 Years",
@@ -63,12 +63,12 @@ export default function PetOwner() {
         <div className="row">
           {pets.map((pet, index) => (
             <div key={index} className="col-md-6">
-              <div className="card p-3 mb-3 shadow-sm d-flex flex-row align-items-center content text-light">
+              <div className="card p-3 mb-3 shadow-sm d-flex flex-row align-items-center content text-light mt-2">
                 <img
                   src={pet.image}
                   alt={pet.name}
-                  className="rounded img-fluid me-3"
-                  width="100"
+                  className="rounded-circle img-fluid me-3"
+                  width="80px"
                 />
                 <div>
                   <h5 className="fw-bold">

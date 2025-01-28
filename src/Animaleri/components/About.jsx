@@ -8,7 +8,7 @@ export default function AboutPage(){
       {/* Header */}
       <header className="text-center mb-5">
         <h1 className="display-4 text-success">About Us</h1>
-        <p className="lead text-muted">
+        <p className="lead text-light">
           Learn more about our mission and values
         </p>
       </header>
@@ -24,7 +24,7 @@ export default function AboutPage(){
           />
         </div>
         <div className="col-md-6 content rounded-4 p-3">
-          <h2 className="fw-bold text-dark mb-3 text-light" >Who We Are</h2>
+          <h2 className="fw-bold mb-3 text-light" >Who We Are</h2>
           <p className="text-light">
             We are a passionate team dedicated to making pets and their
             owners' lives better. Our services aim to meet all the needs of
