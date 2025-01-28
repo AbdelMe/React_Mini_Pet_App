@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import Sidebar from "../../Home";
 import phone from '../../Pictures/phone.png';
 import email from '../../Pictures/email.png';
+import Footer from "../Footer";
 
 export default function Veterinarian() {
   const data = useSelector((state) => state.Compt.DataBase.Veterinarians);

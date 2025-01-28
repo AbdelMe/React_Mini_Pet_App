@@ -9,7 +9,7 @@ import Adopt from './Animaleri/components/PetDetails/Adopt';
 import Buy from './Animaleri/components/PetDetails/Buy';
 import Search from './Animaleri/components/PetDetails/Search';
 import PetOwner from './Animaleri/components/PetOwner';
-import About from './Animaleri/components/About';
+// import About from './Animaleri/components/About';
 import Food from './Animaleri/components/PetDetails/Food';
 import Disease from './Animaleri/components/PetDetails/Disease';
 import Veterinarian from './Animaleri/components/PetDetails/Veterinarian';

@@ -12,5 +12,6 @@ const CompteurSlice = createSlice({
   },
 });
 
-export const { increment, decrement, reset } = CompteurSlice.actions;
+
+export const {} = CompteurSlice.actions;
 export default CompteurSlice.reducer;

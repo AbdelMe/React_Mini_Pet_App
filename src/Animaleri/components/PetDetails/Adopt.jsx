@@ -6,6 +6,43 @@ import { useSelector } from "react-redux";
 export default function Adopt() {
   const data = useSelector((state) => state.Compt.DataBase.Pets);
   const [checkBtn, SetBtn] = useState(undefined);
+
+
+
+    // State to handle modal visibility and selected pet
+    const [showModal, setShowModal] = useState(false);
+    const [selectedPet, setSelectedPet] = useState(null);
+    const [buyerInfo, setBuyerInfo] = useState({
+      name: '',
+      email: '',
+      phone: '',
+      address: '',
+    });
+  
+    const handleShowModal = (pet) => {
+      setSelectedPet(pet);
+      setShowModal(true);
+    };
+  
+    const handleCloseModal = () => {
+      setShowModal(false);
+      setSelectedPet(null);
+    };
+  
+    const handleInputChange = (e) => {
+      const { name, value } = e.target;
+      setBuyerInfo((prevInfo) => ({
+        ...prevInfo,
+        [name]: value,
+      }));
+    };
+  
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      // You can handle form submission here, like sending buyer info to a server or saving it in the store
+      console.log("Buyer Info:", buyerInfo);
+      handleCloseModal();
+    };
   return (
     <>
       <Sidebar>
@@ -13,7 +50,7 @@ export default function Adopt() {
           Adopt a pet
         </button>
         <button className="btn btn-primary mx-1" onClick={() => SetBtn(true)}>
-          Tabaro3 a pet
+          Donate a pet
         </button>
         {checkBtn ? (
           <>
