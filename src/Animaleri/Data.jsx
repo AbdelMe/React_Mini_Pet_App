@@ -83,11 +83,11 @@ const data = {
     ],
     Pet_Food: [
       {
-        type: "",
-        food_title: "",
+        type: "bird",
+        food_title: "Crecket for cut",
         food_pic: "",
-        food_price: "",
-        food_weight: "",
+        food_price: "20dh",
+        food_weight: "1kg",
       },
     ],
     Cart: [],
