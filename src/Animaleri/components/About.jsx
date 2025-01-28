@@ -1,4 +1,6 @@
 import React from "react";
+import aboutPic from '../Pictures/aboutPic.png'
+import Footer from "./Footer";
 
 export default function AboutPage(){
   return (
@@ -15,12 +17,13 @@ export default function AboutPage(){
       <section className="row align-items-center">
         <div className="col-md-6">
           <img
-            src="https://via.placeholder.com/600x400"
-            alt="About Image"
-            className="img-fluid rounded shadow-lg"
+            src={aboutPic}
+            alt="aboutPic"
+            width={450}
+            style={{position: "absolute" , bottom:"50px"}}
           />
         </div>
-        <div className="col-md-6 content">
+        <div className="col-md-6 content rounded-4 p-3">
           <h2 className="fw-bold text-dark mb-3 text-light" >Who We Are</h2>
           <p className="text-light">
             We are a passionate team dedicated to making pets and their
@@ -66,9 +69,9 @@ export default function AboutPage(){
       </section>
 
       {/* Contact Section */}
-      <section className="mt-5 text-center">
-        <h3 className="text-dark mb-3">Get In Touch</h3>
-        <p className="text-muted mb-4">
+      <section className="mt-5 text-center NavDiv rounded-4 p-2">
+        <h3 className=" text-light mb-3">Get In Touch</h3>
+        <p className=" text-light mb-4">
           Feel free to contact us for any inquiries, suggestions, or
           collaborations.
         </p>
@@ -76,6 +79,7 @@ export default function AboutPage(){
           Contact Us
         </a>
       </section>
+      <Footer textLight={"text-dark"}></Footer>
     </div>
   );
 };

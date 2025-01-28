@@ -1,5 +1,5 @@
 import React from "react";
-import HappyPet from "../Pictures/8326656.png";
+import HappyPet from "../Pictures/HappyPet.png";
 import Footer from "./Footer";
 
 export default function Home1() {
@@ -61,19 +61,19 @@ export default function Home1() {
           <div className="col-md-6">
             <img
               src={HappyPet}
-              width={300}
+              width={450}
               alt="Happy Pets"
               className="img-fluid rounded"
             />
           </div>
-          <div className="col-md-6">
+          <div className="col-md-6 content p-3 rounded-4">
             <p className="text-success fw-bold">ABOUT US</p>
             <h2 className="fw-bold">WE KEEP YOUR PETS HAPPY ALL TIME</h2>
             <p>
               Diam dolor diam ipsum tempor sit. Clita erat ipsum et lorem stet
               no labore lorem sit clita duo justo magna dolore.
             </p>
-            <div className="bg-light p-3 rounded text-dark">
+            <div className="bg-light p-3 rounded-4 text-dark">
               <div className="d-flex">
                 <button className="btn btn-success me-3">OUR MISSION</button>
                 <button className="btn btn-light text-dark">OUR VISION</button>

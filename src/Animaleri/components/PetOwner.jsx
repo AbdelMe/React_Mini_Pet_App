@@ -91,7 +91,7 @@ export default function PetOwner() {
           {adoptedPets.map((pet, index) => (
             <li
               key={index}
-              className="list-group-item d-flex justify-content-between align-items-center"
+              className="list-group-item d-flex justify-content-between align-items-center " /*{border-1 border-black}*/
             >
               {pet.name} ({pet.type})
               <span className="badge bg-success">{pet.adoptionDate}</span>

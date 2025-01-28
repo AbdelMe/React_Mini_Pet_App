@@ -5,11 +5,11 @@ import Insta from '../Icons/instagram.png'
 import Teleg from '../Icons/telegram.png'
 import Twitt from '../Icons/twitter.png'
 
-export default function Footer() {
+export default function Footer({textLight}) {
   return (
     <>
       {/* Footer */}
-      <footer className="text-light mt-4">
+      <footer className={`text-light mt-4 ${textLight}`} >
         <div className="container text-center">
           <p className="mb-0">&copy; 2025 Pet Shop. All Rights Reserved.</p>
           <p>Follow us on social media:</p>
