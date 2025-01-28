@@ -87,7 +87,7 @@ export default function Home1() {
         </div>
       </div>
 
-      <div className="NavDiv py-2 BottomSide">
+      <div className="NavDiv py-2 BotomSide">
         <div className="container mt-5 p-4 rounded-4 NavDiv">
           {/* Section Title */}
           <p className="text-success fw-bold">SERVICES</p>

@@ -9,9 +9,9 @@ export default function Footer() {
   return (
     <>
       {/* Footer */}
-      <footer className="text-light">
+      <footer className="text-light mt-4">
         <div className="container text-center">
-          <p>&copy; 2025 Pet Shop. All Rights Reserved.</p>
+          <p className="mb-0">&copy; 2025 Pet Shop. All Rights Reserved.</p>
           <p>Follow us on social media:</p>
           <div>
             <a href="#" className="text-light me-3">
