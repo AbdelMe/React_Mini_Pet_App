@@ -1,19 +1,23 @@
 import React, { useState } from "react";
 import Sidebar from "../../Home";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { AddToCart, AddToFavourit } from "../../ReduxToolkit/DataSlice";
 import { Modal, Button, Form } from "react-bootstrap";
+import pic from "../../Icons/shopping-bag.png";
+import fav from "../../Icons/favorites.png";
 
 export default function Buy() {
   const data = useSelector((state) => state.Compt.DataBase.Pets);
-  
+  const dispatch = useDispatch();
+
   // State to handle modal visibility and selected pet
   const [showModal, setShowModal] = useState(false);
   const [selectedPet, setSelectedPet] = useState(null);
   const [buyerInfo, setBuyerInfo] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    address: '',
+    name: "",
+    email: "",
+    phone: "",
+    address: "",
   });
 
   const handleShowModal = (pet) => {
@@ -33,12 +37,27 @@ export default function Buy() {
       [name]: value,
     }));
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can handle form submission here, like sending buyer info to a server or saving it in the store
     console.log("Buyer Info:", buyerInfo);
     handleCloseModal();
+  };
+
+  //AddToCart
+  const AddToCa = (id) => {
+    const pet = data.find((p) => {
+      return p.id === id;
+    });
+    // alert("Hi Im Pet With id: "+ id);
+    dispatch(AddToCart(pet));
+  };
+
+  //AddToFavourit
+  const AddToFav = (id) => {
+    const pet = data.find((p) => {
+      return p.id === id;
+    });
+    dispatch(AddToFavourit(pet));
   };
 
   return (
@@ -53,6 +72,31 @@ export default function Buy() {
                 className="card rounded-4 bg-black text-light mx-3"
                 style={{ width: "14rem" }}
               >
+                <img
+                  src={pic}
+                  style={{
+                    width: "30px",
+                    position: "absolute",
+                    cursor: "pointer",
+                    top: "10px",
+                    left: "20px",
+                  }}
+                  alt=""
+                  id="AddToCart"
+                  onClick={() => AddToCa(pet.id)}
+                />
+                <img
+                  src={fav}
+                  style={{
+                    width: "28px",
+                    position: "absolute",
+                    cursor: "pointer",
+                    top: "50px",
+                    left: "20px",
+                  }}
+                  alt=""
+                  onClick={() => AddToFav(pet.id)}
+                />
                 {/* Pet Image */}
                 <img
                   src={pet.pic}
@@ -85,7 +129,7 @@ export default function Buy() {
       {/* Modal */}
       <Modal show={showModal} onHide={handleCloseModal}>
         <Modal.Header closeButton className="bg-dark">
-          <Modal.Title>Buy {selectedPet ? selectedPet.name : ''}</Modal.Title>
+          <Modal.Title>Buy {selectedPet ? selectedPet.name : ""}</Modal.Title>
         </Modal.Header>
         <Modal.Body className="bg-dark">
           <Form onSubmit={handleSubmit}>

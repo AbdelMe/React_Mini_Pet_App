@@ -45,6 +45,11 @@ body{
     left: 700px;
 } */
 
+#cart{
+    scrollbar-width: none;
+    -ms-overflow-style: none
+}
+
 /* Scroll Style */
 ::-webkit-scrollbar{
     width: 8px;
