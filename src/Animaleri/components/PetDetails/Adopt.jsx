@@ -1,48 +1,35 @@
 import React, { useState } from "react";
 import Sidebar from "../../Home";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { AddToPet } from "../../ReduxToolkit/DataSlice";
 // import { StrictMode } from "react";
 
 export default function Adopt() {
   const data = useSelector((state) => state.Compt.DataBase.Pets);
   const [checkBtn, SetBtn] = useState(undefined);
+  // const [Breakfast, SetBreakfast] = useState('');
+  // const [Diner, SetDiner] = useState('');
+  // const [Lanche, SetLanch] = useState('');
 
+  const dispatch = useDispatch();
 
+  const [PetInfo, SetPetInfo] = useState({
+    type: "",
+    name: "",
+    age: "",
+    pic: "",
+    color: "",
+    weight: "",
+    // food_Time:{breakfast: Breakfast, diner: Diner, lanche: Lanche},
+    contact: "",
+  });
 
-    // State to handle modal visibility and selected pet
-    const [showModal, setShowModal] = useState(false);
-    const [selectedPet, setSelectedPet] = useState(null);
-    const [buyerInfo, setBuyerInfo] = useState({
-      name: '',
-      email: '',
-      phone: '',
-      address: '',
-    });
-  
-    const handleShowModal = (pet) => {
-      setSelectedPet(pet);
-      setShowModal(true);
-    };
-  
-    const handleCloseModal = () => {
-      setShowModal(false);
-      setSelectedPet(null);
-    };
-  
-    const handleInputChange = (e) => {
-      const { name, value } = e.target;
-      setBuyerInfo((prevInfo) => ({
-        ...prevInfo,
-        [name]: value,
-      }));
-    };
-  
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      // You can handle form submission here, like sending buyer info to a server or saving it in the store
-      console.log("Buyer Info:", buyerInfo);
-      handleCloseModal();
-    };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(PetInfo);
+    dispatch(AddToPet(PetInfo));
+  };
+
   return (
     <>
       <Sidebar>
@@ -65,7 +52,16 @@ export default function Adopt() {
                   Pet Type:
                 </label>
                 <div className="col-sm-8">
-                  <select className="form-select" id="petType">
+                  <select
+                    className="form-select"
+                    id="petType"
+                    onChange={(e) =>
+                      SetPetInfo((prevInfo) => ({
+                        ...prevInfo,
+                        type: e.target.value,
+                      }))
+                    }
+                  >
                     <option selected>Select a pet type</option>
                     <option value="dog">Dog</option>
                     <option value="cat">Cat</option>
@@ -89,7 +85,13 @@ export default function Adopt() {
                     className="form-control"
                     id="petName"
                     placeholder="Enter the pet's name"
-                    required
+                    onChange={(e) =>
+                      SetPetInfo((prevInfo) => ({
+                        ...prevInfo,
+                        name: e.target.value,
+                      }))
+                    }
+                    // required
                   />
                 </div>
               </div>
@@ -108,7 +110,13 @@ export default function Adopt() {
                     className="form-control"
                     id="petAge"
                     placeholder="Enter the pet's age"
-                    required
+                    onChange={(e) =>
+                      SetPetInfo((prevInfo) => ({
+                        ...prevInfo,
+                        age: e.target.value,
+                      }))
+                    }
+                    // required
                   />
                 </div>
               </div>
@@ -130,7 +138,13 @@ export default function Adopt() {
                     className="form-control"
                     id="PetColor"
                     rows="3"
-                    required
+                    onChange={(e) =>
+                      SetPetInfo((prevInfo) => ({
+                        ...prevInfo,
+                        color: e.target.value,
+                      }))
+                    }
+                    // required
                   ></input>
                 </div>
 
@@ -147,7 +161,13 @@ export default function Adopt() {
                     id="PetColor"
                     placeholder="Weight"
                     rows="3"
-                    required
+                    onChange={(e) =>
+                      SetPetInfo((prevInfo) => ({
+                        ...prevInfo,
+                        weight: e.target.value,
+                      }))
+                    }
+                    // required
                   ></input>
                 </div>
 
@@ -163,16 +183,44 @@ export default function Adopt() {
                     className="form-control"
                     id="petName"
                     placeholder="Enter the pet's name"
-                    required
+                    onChange={(e) =>
+                      SetPetInfo((prevInfo) => ({
+                        ...prevInfo,
+                        pic: e.target.value,
+                      }))
+                    }
+                    // required
                   />
                 </div>
               </div>
 
-              {/* Pet Description Section */}
-              <div className="row mb-3 d-flex align-items-center"></div>
+              <div className="row mb-3">
+                <label
+                  htmlFor="AdopterContact"
+                  className="col-sm-4 col-form-label text-end text-light fs-5"
+                >
+                  Contact:
+                </label>
+                <div className="col-sm-8">
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="AdopterContact"
+                    placeholder="Enter Your Contact Email, Phone..."
+                    onChange={(e) =>
+                      SetPetInfo((prevInfo) => ({
+                        ...prevInfo,
+                        contact: e.target.value,
+                      }))
+                    }
+                    // required
+                  />
+                </div>
+              </div>
+
 
               {/* Pet Breed Section */}
-              <div className="row mb-3 d-flex align-items-center">
+              {/* <div className="row mb-3 d-flex align-items-center">
                 <label
                   htmlFor="petBreed"
                   className="col-sm-4 col-form-label text-end text-light fs-5"
@@ -181,37 +229,26 @@ export default function Adopt() {
                 </label>
                 <div className="col-sm-2 d-flex justify-content-center align-items-center">
                   <span className="text-light fs-6 mx-2">Breakfast:</span>
-                  <input
-                    type="time"
-                    className="form-control"
-                    id="petBreed"
-                    required
-                  />
+                  <input type="time" className="form-control" id="petBreed" />
                 </div>
                 <div className="col-sm-2 d-flex justify-content-center align-items-center">
                   <span className="text-light fs-6 mx-2">Lanche:</span>
-                  <input
-                    type="time"
-                    className="form-control"
-                    id="petBreed"
-                    required
-                  />
+                  <input type="time" className="form-control" id="petBreed" />
                 </div>
                 <div className="col-sm-2 d-flex justify-content-center align-items-center">
                   <span className="text-light fs-6 mx-2">Diner:</span>
-                  <input
-                    type="time"
-                    className="form-control"
-                    id="petBreed"
-                    required
-                  />
+                  <input type="time" className="form-control" id="petBreed" />
                 </div>
-              </div>
+              </div> */}
 
               {/* Submit Button */}
               <div className="row mb-3">
                 <div className="col-sm-10 m-auto">
-                  <button type="submit" className="btn btn-primary w-100">
+                  <button
+                    type="submit"
+                    className="btn btn-primary w-100"
+                    onClick={handleSubmit}
+                  >
                     Submit Adoption Request
                   </button>
                 </div>
@@ -220,7 +257,7 @@ export default function Adopt() {
           </>
         ) : checkBtn === false ? (
           <>
-            <div className="d-flex justify-content-evenly mt-4">
+            <div className="d-flex justify-content-evenly flex-wrap mt-4">
               {data.map((pet) => {
                 return (
                   <>

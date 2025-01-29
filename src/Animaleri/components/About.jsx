@@ -20,7 +20,7 @@ export default function AboutPage(){
             src={aboutPic}
             alt="aboutPic"
             width={450}
-            style={{position: "absolute" , bottom:"50px"}}
+            style={{position: "absolute" , bottom:"20px"}}
           />
         </div>
         <div className="col-md-6 content rounded-4 p-3">

@@ -7,7 +7,8 @@ export default function Search() {
   const [SearchVal, SetSearchVal] = useState("");
 
   const FiltredData = data.filter((p) =>
-    p.type.toLocaleLowerCase().includes(SearchVal.toLocaleLowerCase())
+    p.type.toLocaleLowerCase().includes(SearchVal.toLocaleLowerCase()) || 
+    p.name.toLocaleLowerCase().includes(SearchVal.toLocaleLowerCase())
   );
 
   return (
@@ -20,7 +21,7 @@ export default function Search() {
             type="text"
             id="searchInput"
             className="form-control text-start"
-            placeholder="Search for a pet by name, type, or breed..."
+            placeholder="Search for a pet by name, type..."
             aria-label="Search"
             onChange={(e) => SetSearchVal(e.target.value)}
           />
@@ -28,7 +29,13 @@ export default function Search() {
           {/* <button className="btn btn-primary">Search</button> */}
         </div>
 
-        <div className={`d-flex mt-4 ${FiltredData.length >= 4 ? "justify-content-center" : "justify-content-start"}`}>
+        <div
+          className={`d-flex mt-4 ${
+            FiltredData.length >= 4
+              ? "justify-content-center"
+              : "justify-content-start"
+          }`}
+        >
           {FiltredData.map((pet) => {
             return (
               <>
@@ -55,7 +62,9 @@ export default function Search() {
                     <p className="card-text">
                       <strong>Age: </strong> {pet.age}
                     </p>
-                    <button className="btn btn-success w-100">Available </button>
+                    <button className="btn btn-success w-100">
+                      Available{" "}
+                    </button>
                   </div>
                 </div>
               </>

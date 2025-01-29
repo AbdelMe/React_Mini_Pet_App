@@ -40,7 +40,7 @@ export default function PetAdvice() {
       <div className="row">
         {adviceList.map((advice, index) => (
           <div key={index} className="col-md-4 mb-4">
-            <div className="card shadow-sm">
+            <div className="card shadow-sm NavDiv text-light rounded-4">
               <div className="card-body">
                 <h5 className="card-title text-success">{advice.title}</h5>
                 <p className="card-text">{advice.description}</p>

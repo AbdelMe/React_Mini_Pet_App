@@ -2,16 +2,19 @@ import { createSlice } from "@reduxjs/toolkit";
 import data from "../Data";
 const AllData = data;
 
-const CompteurSlice = createSlice({
+const DataSlice = createSlice({
   name: "own",
   initialState: AllData,
   reducers: {
-    increment: (state) => {
-      return;
+    AddToPet: (state,action) => {
+      {state.DataBase.Adopt_Pet = [...state.DataBase.Adopt_Pet,action.payload]};
+    },
+    AddToCart: (state,action)=>{
+      return
     }
   },
 });
 
 
-export const {} = CompteurSlice.actions;
-export default CompteurSlice.reducer;
+export const {AddToPet} = DataSlice.actions;
+export default DataSlice.reducer;
