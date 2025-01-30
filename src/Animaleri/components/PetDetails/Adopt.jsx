@@ -26,7 +26,7 @@ export default function Adopt() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(PetInfo);
+    // console.log(PetInfo);
     dispatch(AddToPet(PetInfo));
   };
 

@@ -5,9 +5,10 @@ import LogOut from "./Icons/logout.png";
 // import Cartt from "./Icons/shopping-bag.png";
 // import Fav from "./Icons/favorites.png";
 import Cart from "./components/Cart";
-import { useState } from "react";
+import {useState} from "react";
 import { useSelector } from "react-redux";
 export default function Nav() {
+
   const [Show, SetShow] = useState(false);
   const data = useSelector((state) => state.Compt.DataBase.Cart);
   return (

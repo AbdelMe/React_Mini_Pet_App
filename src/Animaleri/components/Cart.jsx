@@ -1,11 +1,11 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { DeleteFromCart } from "../ReduxToolkit/DataSlice";
-import { body } from "framer-motion/client";
 
 export default function Cart() {
   const data = useSelector((state) => state.Compt.DataBase.Cart);
   const dispatch = useDispatch();
+  
 
   // const Leave = ()=>{
   //     document.getElementById('cart').style.display = 'none'
