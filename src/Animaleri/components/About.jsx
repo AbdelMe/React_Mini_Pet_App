@@ -1,8 +1,10 @@
-import React from "react";
+import React, { createContext, useContext } from "react";
 import aboutPic from '../Pictures/aboutPic.png'
 import Footer from "./Footer";
+import { textColor } from "./Footer";
 
 export default function AboutPage(){
+  const textC = useContext(textColor)
   return (
     <div className="container py-5">
       {/* Header */}
@@ -79,8 +81,9 @@ export default function AboutPage(){
           Contact Us
         </a>
       </section>
-      <Footer textLight={"text-dark"}></Footer>
+      <Footer text={textC.textDark}></Footer>
     </div>
   );
 };
+
 

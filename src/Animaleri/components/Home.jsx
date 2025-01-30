@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import HappyPet from "../Pictures/HappyPet.png";
 import Footer from "./Footer";
+import { textColor } from "./Footer";
 
 export default function Home1() {
+  const textC = useContext(textColor)
   const services = [
     {
       icon: "🏡",
@@ -114,7 +116,7 @@ export default function Home1() {
             ))}
           </div>
         </div>
-        <Footer></Footer>
+        <Footer text={textC.textLight}></Footer>
       </div>
     </div>
   );
