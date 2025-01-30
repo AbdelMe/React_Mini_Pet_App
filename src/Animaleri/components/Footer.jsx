@@ -10,6 +10,7 @@ export const textColor = createContext({
   textLight:'text-light',
   textDark:'text-dark'
 })
+//
 export default function Footer({text}) {
   return (
     <>
