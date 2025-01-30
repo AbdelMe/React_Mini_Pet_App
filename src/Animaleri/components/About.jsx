@@ -44,10 +44,10 @@ export default function AboutPage(){
       <section className="mt-5 text-center">
         <div className="row">
           <div className="col-lg-6 mb-4">
-            <div className="card shadow-sm border-success">
-              <div className="card-body">
+            <div className="card rounded-4">
+              <div className="card-body NavDiv rounded-4">
                 <h5 className="card-title text-success">Our Mission</h5>
-                <p className="card-text text-dark">
+                <p className="card-text text-light">
                   Our mission is to ensure that every pet receives the highest
                   quality of care and attention. We aim to provide peace of mind
                   to pet owners and create a safe, loving environment for pets.
@@ -56,10 +56,10 @@ export default function AboutPage(){
             </div>
           </div>
           <div className="col-lg-6 mb-4">
-            <div className="card shadow-sm border-primary">
-              <div className="card-body">
+            <div className="card rounded-4">
+              <div className="card-body NavDiv rounded-4">
                 <h5 className="card-title text-primary">Our Vision</h5>
-                <p className="card-text text-dark">
+                <p className="card-text text-light">
                   Our vision is to become the most trusted pet care provider in
                   the region, offering services that cater to the needs of every
                   pet, from puppies to elderly companions.
