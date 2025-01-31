@@ -1,5 +1,5 @@
 import React from 'react'
-import Sidebar from '../../Home';
+import Sidebar from '../PetDetailsComponent';
 
 export default function PetAdvice() {
   const adviceList = [

@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import Sidebar from "../../Home";
+import Sidebar from "../PetDetailsComponent";
 import phone from '../../Pictures/phone.png';
 import email from '../../Pictures/email.png';
 

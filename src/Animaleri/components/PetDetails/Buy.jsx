@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Sidebar from "../../Home";
+import Sidebar from "../PetDetailsComponent";
 import { useDispatch, useSelector } from "react-redux";
 import { AddToCart, AddToFavourit } from "../../ReduxToolkit/DataSlice";
 import { Modal, Button, Form } from "react-bootstrap";

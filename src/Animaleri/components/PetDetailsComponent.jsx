@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
+import Nav from "./Nav";
 
 function Sidebar({ children }) {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -45,7 +46,9 @@ function Sidebar({ children }) {
   ];
 
   return (
-    <div className="d-flex mt-4">
+    <>
+    <Nav></Nav>
+      <div className="d-flex mt-4">
       {/* Sidebar */}
       <div
         className={`text-white ${
@@ -108,6 +111,7 @@ function Sidebar({ children }) {
       )}
       {/* <footer className="text-light">©️2025</footer> */}
     </div>
+    </>
   );
 }
 

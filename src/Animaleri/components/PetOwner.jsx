@@ -1,6 +1,7 @@
 import React from "react";
 import PetOwn from "../Pictures/profile-pic (2).png";
 import Footer from "./Footer";
+import Nav from "./Nav";
 export default function PetOwner() {
   const owner = {
     name: "Mohammed El Abdellaoui",
@@ -38,6 +39,7 @@ export default function PetOwner() {
   ];
   return (
     <>
+    <Nav></Nav>
       <div className="container mt-5">
         {/* Owner Profile */}
         <div className="card p-4 shadow-sm mb-4 content text-light">

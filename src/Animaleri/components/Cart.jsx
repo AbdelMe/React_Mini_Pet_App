@@ -5,7 +5,6 @@ import { DeleteFromCart } from "../ReduxToolkit/DataSlice";
 export default function Cart() {
   const data = useSelector((state) => state.Compt.DataBase.Cart);
   const dispatch = useDispatch();
-  
 
   // const Leave = ()=>{
   //     document.getElementById('cart').style.display = 'none'

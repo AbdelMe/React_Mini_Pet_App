@@ -1,10 +1,10 @@
-import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import "./Style/Nav.css";
+import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "../Style/Nav.css";
 import { Link } from "react-router-dom";
-import LogOut from "./Icons/logout.png";
+import LogOut from "../Icons/logout.png";
 // import Cartt from "./Icons/shopping-bag.png";
 // import Fav from "./Icons/favorites.png";
-import Cart from "./components/Cart";
+import Cart from "./Cart";
 import {useState} from "react";
 import { useSelector } from "react-redux";
 export default function Nav() {
@@ -54,9 +54,9 @@ export default function Nav() {
           }}
           className="rounded-circle position-absolute"
         ></div>
-        <img src={require('./Icons/favorites.png')} alt="" id="Favourite" />
+        <img src={require('../Icons/favorites.png')} alt="" id="Favourite" />
         <img
-          src={require("./Icons/shopping-bag.png")}
+          src={require("../Icons/shopping-bag.png")}
           alt=""
           id="Cart"
           style={{cursor:"pointer"}}

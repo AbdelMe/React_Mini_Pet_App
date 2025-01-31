@@ -12,6 +12,7 @@ const data = {
         weight: 2,
         // food_Time: { breakfast: "", diner: "", lanche: "" },
         contact: "",
+        Adopted_date:""
       },
       {
         id: 2,
@@ -24,6 +25,7 @@ const data = {
         weight: 2,
         // food_Time: { breakfast: "", diner: "", lanche: "" },
         contact: "",
+        Adopted_date:""
       },
       {
         id: 3,
@@ -36,6 +38,7 @@ const data = {
         weight: 2,
         // food_Time: { breakfast: "", diner: "", lanche: "" },
         contact: "",
+        Adopted_date:""
       },
       {
         id: 4,
@@ -48,6 +51,7 @@ const data = {
         weight: 2,
         // food_Time: { breakfast: "", diner: "", lanche: "" },
         contact: "",
+        Adopted_date:""
       },
     ],
     Adopt_Pet: [],
@@ -55,7 +59,7 @@ const data = {
       {
         id: 1,
         f_name: "Aymane",
-        l_name: "harchi",
+        l_name: "fri7a",
         pic: "../assets/VetPic/vetMen.jpg",
         email: "Aymane@gmail.com",
         phone: "617663421",
@@ -63,7 +67,7 @@ const data = {
       {
         id: 2,
         f_name: "Soufian",
-        l_name: "ounjli",
+        l_name: "l3alawi",
         pic: "../assets/VetPic/vetMen.jpg",
         email: "Soufian@gmail.com",
         phone: "786519871",
@@ -71,15 +75,15 @@ const data = {
       {
         id: 3,
         f_name: "Yassin",
-        l_name: "man3reft",
+        l_name: "znide9",
         pic: "../assets/VetPic/vetMen.jpg",
         email: "Yassin@gmail.com",
         phone: "733451879",
       },
       {
         id: 4,
-        f_name: "Mohemmed",
-        l_name: "Abdellaoui",
+        f_name: "Mohammed",
+        l_name: "fertut",
         pic: "../assets/VetPic/vetMen.jpg",
         email: "Mohammed@gmail.com",
         phone: "613946107",

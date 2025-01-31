@@ -1,7 +1,9 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useContext } from "react";
 import HappyPet from "../Pictures/HappyPet.png";
 import Footer from "./Footer";
 import { textColor } from "./Footer";
+import Nav from "./Nav";
 
 export default function Home1() {
   const textC = useContext(textColor)
@@ -45,6 +47,7 @@ export default function Home1() {
   ];
   return (
     <div>
+      <Nav></Nav>
       <div className="container mt-5">
         {/* Header */}
         <header className="d-flex justify-content-between align-items-center pb-3">

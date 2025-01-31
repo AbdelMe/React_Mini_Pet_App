@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Sidebar from "../../Home";
+import Sidebar from "../PetDetailsComponent";
 import { useSelector } from "react-redux";
 
 export default function Food() {

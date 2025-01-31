@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Sidebar from "../../Home";
+import Sidebar from "../PetDetailsComponent";
 import { useSelector, useDispatch } from "react-redux";
 import { AddToPet } from "../../ReduxToolkit/DataSlice";
 // import { StrictMode } from "react";
