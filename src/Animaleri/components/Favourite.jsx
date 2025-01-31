@@ -23,7 +23,7 @@ export default function Favourite() {
       }}
     >
       <div className="card-body">
-        <h4 className="card-title text-center">❤ My Favourit Pet</h4>
+        <h4 className="card-title text-center">❤ My Favourit Pet </h4>
         <table className="table table-hover text-center">
           <thead className="table-dark">
             <tr>
