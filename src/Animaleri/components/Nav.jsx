@@ -5,12 +5,16 @@ import LogOut from "../Icons/logout.png";
 // import Cartt from "./Icons/shopping-bag.png";
 // import Fav from "./Icons/favorites.png";
 import Cart from "./Cart";
-import {useState} from "react";
+import { useState } from "react";
 import { useSelector } from "react-redux";
+import Favourite from "./Favourite";
 export default function Nav() {
+  const [ShowCart, SetShowCart] = useState(false);
+  const [ShowFav, SetShowFav] = useState(false);
 
-  const [Show, SetShow] = useState(false);
   const data = useSelector((state) => state.Compt.DataBase.Cart);
+  const data1 = useSelector((state) => state.Compt.DataBase.Favourite);
+
   return (
     <>
       <div className="py-3 text-primary rounded-5 container w-50 NavDiv mt-2">
@@ -37,8 +41,8 @@ export default function Nav() {
             height: "18px",
             backgroundColor: "red",
             top: "17px",
-            left: "70px",
-            cursor:"pointer"
+            left: "65px",
+            cursor: "pointer",
           }}
           className="rounded-circle position-absolute d-flex justify-content-center align-items-center"
         >
@@ -49,23 +53,36 @@ export default function Nav() {
             width: "18px",
             height: "18px",
             backgroundColor: "red",
-            top: "19px",
-            left: "25px",
+            top: "18px",
+            left: "23px",
           }}
-          className="rounded-circle position-absolute"
-        ></div>
-        <img src={require('../Icons/favorites.png')} alt="" id="Favourite" />
+          className="rounded-circle position-absolute d-flex justify-content-center align-items-center"
+        >
+          {data1.length >= 9 ? "+" + 9 : data1.length}
+        </div>
+        <img
+          src={require("../Icons/favorites.png")}
+          alt=""
+          id="Favourite"
+          style={{ cursor: "pointer" }}
+          onClick={() => {
+            SetShowFav(true);
+          }}
+        />
         <img
           src={require("../Icons/shopping-bag.png")}
           alt=""
           id="Cart"
-          style={{cursor:"pointer"}}
+          style={{ cursor: "pointer" }}
           onClick={() => {
-            SetShow(true);
+            SetShowCart(true);
           }}
         />
-        <Link to="/Login"><img src={LogOut} alt="" id="LogOut" style={{cursor:"pointer"}}/></Link>
-        <div>{Show ? <Cart></Cart> : ""}</div>
+        <Link to="/Login">
+          <img src={LogOut} alt="" id="LogOut" style={{ cursor: "pointer" }} />
+        </Link>
+        <div>{ShowCart ? <Cart></Cart> : ""}</div>
+        <div>{ShowFav ? <Favourite></Favourite> : ""}</div>
       </div>
     </>
   );

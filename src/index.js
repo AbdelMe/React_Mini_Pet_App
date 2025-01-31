@@ -21,16 +21,14 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <Provider store={StoreToolkit}>
         <BrowserRouter>
+
             <Routes>
+
                 <Route path='/' element={<Home1></Home1>}></Route>
                 <Route path='/PetDetails' element={<Home></Home>}></Route>
                 <Route path='/PetOwner' element={<PetOwner></PetOwner>}></Route>
                 <Route path='/About' element={<AboutPage></AboutPage>}></Route>
                 <Route path='/Login' element={<Login></Login>}></Route>
-                <Route path='*' element={<Error404></Error404>}></Route>
-            </Routes>
-
-            <Routes>
                 <Route path='/adopt' element={<Adopt></Adopt>}></Route>
                 <Route path='/buy' element={<Buy></Buy>}></Route>
                 <Route path='/search' element={<Search></Search>}></Route>
@@ -38,6 +36,8 @@ root.render(
                 <Route path='/disease' element={<Disease></Disease>}></Route>
                 <Route path='/vet' element={<Veterinarian></Veterinarian>}></Route>
                 <Route path='/advices' element={<Advices></Advices>}></Route>
+                <Route path='/*' element={<Error404></Error404>}></Route>
+
             </Routes>
         </BrowserRouter>
     </Provider>

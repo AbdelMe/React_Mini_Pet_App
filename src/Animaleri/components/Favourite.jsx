@@ -1,14 +1,14 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { DeleteFromCart } from "../ReduxToolkit/DataSlice";
+import { DeleteFromFav } from "../ReduxToolkit/DataSlice";
 
-export default function Cart() {
-  const data = useSelector((state) => state.Compt.DataBase.Cart);
+export default function Favourite() {
+  const data = useSelector((state) => state.Compt.DataBase.Favourite);
   const dispatch = useDispatch();
 
   const SupPet = (id) => {
     const petIndex = data.findIndex((p) => p.id === id);
-    dispatch(DeleteFromCart(petIndex));
+    dispatch(DeleteFromFav(petIndex));
   };
 
   return (
@@ -23,7 +23,7 @@ export default function Cart() {
       }}
     >
       <div className="card-body">
-        <h4 className="card-title text-center">🛒 My Cart</h4>
+        <h4 className="card-title text-center">❤ My Favourit Pet</h4>
         <table className="table table-hover text-center">
           <thead className="table-dark">
             <tr>

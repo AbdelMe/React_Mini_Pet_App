@@ -1,5 +1,5 @@
 /* eslint-disable no-lone-blocks */
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice} from "@reduxjs/toolkit";
 import data from "../Data";
 const AllData = data;
 
@@ -19,9 +19,12 @@ const DataSlice = createSlice({
     AddToFavourit: (state,action)=>{
       {state.DataBase.Favourite = [...state.DataBase.Favourite,action.payload]}
     },
+    DeleteFromFav: (state,action)=>{
+      {state.DataBase.Cart.splice(action.payload,1)}
+    },
   },
 });
 
 
-export const {AddToPet , AddToCart, AddToFavourit, DeleteFromCart} = DataSlice.actions;
+export const {AddToPet , AddToCart, AddToFavourit, DeleteFromCart , DeleteFromFav} = DataSlice.actions;
 export default DataSlice.reducer;
