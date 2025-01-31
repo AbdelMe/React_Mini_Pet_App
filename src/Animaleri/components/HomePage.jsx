@@ -7,9 +7,11 @@ import Nav from "./Nav";
 
 export default function Home1() {
   const textC = useContext(textColor);
-  // const today = new Date();
-  // const formattedDate = today.toISOString().split("T")[0];
-  // console.log(formattedDate); // Example: "2025-01-31"
+  const simo = ['simo','ali']
+  const copieSimo = [...simo,'abdellaoui','alawi']
+  console.log(copieSimo)
+
+  // console.log(new Date().toLocaleDateString()) //31/01/2025
   const services = [
     {
       icon: "🏡",
