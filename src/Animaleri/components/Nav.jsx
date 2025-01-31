@@ -16,8 +16,8 @@ export default function Nav() {
   const data1 = useSelector((state) => state.Compt.DataBase.Favourite);
 
   return (
-    <>
-      <div className="py-3 text-primary rounded-5 container w-50 NavDiv mt-2">
+    <div className="sticky-top">
+      <div className="py-3 text-primary rounded-5 container w-50 NavDiv mt-2 sticky-top">
         <ul className="d-flex justify-content-around px-0 m-0 rounded">
           <Link to="/" className="text-light text-decoration-none">
             Home
@@ -84,6 +84,6 @@ export default function Nav() {
         <div>{ShowCart ? <Cart></Cart> : ""}</div>
         <div>{ShowFav ? <Favourite></Favourite> : ""}</div>
       </div>
-    </>
+    </div>
   );
 }
