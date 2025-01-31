@@ -53,7 +53,7 @@ export default function Cart() {
                     className="btn btn-sm btn-danger"
                     onClick={() => SupPet(pet.id)}
                   >
-                    🗑️
+                    Delete
                   </button>
                 </td>
               </tr>
