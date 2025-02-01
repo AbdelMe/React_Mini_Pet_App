@@ -7,9 +7,6 @@ import Nav from "./Nav";
 
 export default function Home1() {
   const textC = useContext(textColor);
-  const simo = ['simo','ali']
-  const copieSimo = [...simo,'abdellaoui','alawi']
-  console.log(copieSimo)
 
   // console.log(new Date().toLocaleDateString()) //31/01/2025
   const services = [

@@ -55,6 +55,28 @@ const data = {
       },
     ],
     Adopt_Pet: [],
+    Pet_Disease:[
+      {
+        pic: "../assets/PetDisease/Feline-Heartworm-Disease1.jpg",
+        d_name: "Feline Heartworm",
+        treatment: "Preventative medications (monthly pills or injections)",
+      },
+      {
+        pic: "../assets/PetDisease/Cats-organ-and-urologic-disease_1024x1024.jpg",
+        d_name: "Cats organ and urologic",
+        treatment: "anti-inflammatory drugs ",
+      },
+      {
+        pic: "../assets/PetDisease/th-blog-lyme-disease-in-dogs.jpg",
+        d_name: "th blog lyme",
+        treatment: "Antibiotics (such as doxycycline) to kill the bacteria",
+      },
+      // {
+      //   pic: "../assets/PetDisease/kennel-cough-in-dogs.jpg",
+      //   d_name: "kennel cough",
+      //   treatment: "Antihistamines or corticosteroids to reduce inflammation",
+      // }
+    ],
     Veterinarians: [
       {
         id: 1,

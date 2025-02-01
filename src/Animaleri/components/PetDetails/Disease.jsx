@@ -1,7 +1,10 @@
 import React from "react";
 import Sidebar from "../PetDetailsComponent";
+import { useSelector } from "react-redux";
 
 export default function Disease() {
+  const data = useSelector((state) => state.Compt.DataBase.Pet_Disease);
+
   return (
     <div>
       <Sidebar>
@@ -20,6 +23,39 @@ export default function Disease() {
             </select>
           </div>
         </div>
+        <div className="d-flex justify-content-evenly flex-wrap mt-4">
+              {data.map((pet) => {
+                return (
+                  <>
+                    <div
+                      className="card rounded-4 bg-black text-light w-25 mx-1"
+                      style={{ width: "14rem" }}
+                    >
+                      {/* Pet Image */}
+                      <img
+                        src={pet.pic}
+                        alt=""
+                        className="card-img-top rounded-top-4 "
+                        style={{ height: "10rem", objectFit: "cover" }}
+                      />
+                      {/* Card Body */}
+                      <div className="card-body">
+                        <h5 className="card-title text-primary">{}</h5>
+                        <p className="card-text">
+                          <strong>Disease Name: </strong> {pet.d_name}
+                        </p>
+                        <p className="card-text">
+                          <strong>Treatment: </strong> {pet.treatment}
+                        </p>
+                        <button className="btn btn-warning w-100">
+                          Show More
+                        </button>
+                      </div>
+                    </div>
+                  </>
+                );
+              })}
+            </div>
       </Sidebar>
     </div>
   );

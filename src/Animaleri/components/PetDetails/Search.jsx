@@ -5,11 +5,17 @@ import { useSelector } from "react-redux";
 export default function Search() {
   const data = useSelector((state) => state.Compt.DataBase.Pets);
   const [SearchVal, SetSearchVal] = useState("");
+  // const [Dt,SetDt] = useState([...data])
 
   const FiltredData = data.filter((p) =>
     p.type.toLocaleLowerCase().includes(SearchVal.toLocaleLowerCase()) || 
     p.name.toLocaleLowerCase().includes(SearchVal.toLocaleLowerCase())
   );
+
+  // const handleClick = ()=>{
+  //   const newData = data.filter(e => SearchVal === "" ? Dt : e.type.toLocaleLowerCase().includes(SearchVal.toLocaleLowerCase()))
+  //   SetDt(newData)
+  // }
 
   return (
     <>
@@ -26,7 +32,7 @@ export default function Search() {
             onChange={(e) => SetSearchVal(e.target.value)}
           />
           {/* Search Button */}
-          {/* <button className="btn btn-primary">Search</button> */}
+          {/*<button className="btn btn-primary" >Search</button>*/} {/*onClick={handleClick} //if button clicked*/}
         </div>
 
         <div
