@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { createContext, useContext } from "react";
+import React, { createContext } from "react";
 import Linkedin from '../Icons/linkedin.png'
 import Face from '../Icons/facebook.png'
 import Insta from '../Icons/instagram.png'
