@@ -1,7 +1,6 @@
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../Style/Nav.css";
 import { Link } from "react-router-dom";
-import LogOut from "../Icons/logout.png";
 // import Cartt from "./Icons/shopping-bag.png";
 // import Fav from "./Icons/favorites.png";
 import Cart from "./Cart";
@@ -79,7 +78,7 @@ export default function Nav() {
           }}
         />
         <Link to="/Login">
-          <img src={LogOut} alt="" id="LogOut" style={{ cursor: "pointer" }} />
+          <img src={require('../Icons/LogOut.png')} alt="" id="LogOut" style={{ cursor: "pointer" }} />
         </Link>
         <div>{ShowCart ? <Cart></Cart> : ""}</div>
         <div>{ShowFav ? <Favourite></Favourite> : ""}</div>
