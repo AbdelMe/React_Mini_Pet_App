@@ -1,0 +1,65 @@
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Sour Gummy','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* background-color: #65CCB8; */
+    /* background-color: #57BA98; */
+    background-image: url('../Pictures/wallpaperflare.com_wallpaper\ \(4\).jpg');
+    background-size: cover;
+    background-position: bottom center; 
+    background-repeat: no-repeat;
+    height: 100vh
+}
+.NavDiv{
+    /* background-color: transparent; */
+    /* background-color: rgba(0, 0, 0, 0.233); */
+    background-color: #182628;
+    backdrop-filter: blur(10px);
+
+}
+.content{
+    background-color: #18262869;
+}
+#LogOut, #Favourite , #Cart{
+    width: 35px;
+    height: 35px;
+}
+
+#LeftSide{
+    position: absolute;
+    width: 150px;
+    top: 15px;
+    right: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.BotomSide{
+    background-color: #0D1F1F;
+}
+
+/* footer{
+    position: absolute;
+    bottom: 15px;
+    left: 700px;
+} */
+
+#cart{
+    scrollbar-width: none;
+    -ms-overflow-style: none
+}
+
+/* Scroll Style */
+::-webkit-scrollbar{
+    width: 8px;
+}
+::-webkit-scrollbar-track{
+    background: #d1e5ff;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(#642bff,#14afaa);
+    border-radius: 1px;
+}
+
