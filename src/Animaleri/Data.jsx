@@ -57,16 +57,19 @@ const data = {
     Adopt_Pet: [],
     Pet_Disease:[
       {
+        type: "dog",
         pic: "../assets/PetDisease/Feline-Heartworm-Disease1.jpg",
         d_name: "Feline Heartworm",
         treatment: "Preventative medications (monthly pills or injections)",
       },
       {
+        type: "cat",
         pic: "../assets/PetDisease/Cats-organ-and-urologic-disease_1024x1024.jpg",
         d_name: "Cats organ and urologic",
         treatment: "anti-inflammatory drugs ",
       },
       {
+        type: "dog",
         pic: "../assets/PetDisease/th-blog-lyme-disease-in-dogs.jpg",
         d_name: "th blog lyme",
         treatment: "Antibiotics (such as doxycycline) to kill the bacteria",

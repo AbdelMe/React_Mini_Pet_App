@@ -57,7 +57,7 @@ export default function Home1() {
             <i className="bi bi-house-door"></i> PET SHOP
           </h2>
           <nav>
-            <a href="#" className="btn btn-success">
+            <a href="mailto:petshop@gmail.com" className="btn btn-success">
               Contact →
             </a>
           </nav>
@@ -86,8 +86,9 @@ export default function Home1() {
                 <button className="btn btn-light text-dark">OUR VISION</button>
               </div>
               <p className="mt-3">
-                Tempor erat elitr at rebum at clita aliquam consectetur. Diam
-                dolor diam ipsum et, tempor voluptua sit consectetur sit.
+                Our vision is to become the most trusted pet care provider in
+                the region, offering services that cater to the needs of every
+                pet, from puppies to elderly companions.
               </p>
             </div>
           </div>

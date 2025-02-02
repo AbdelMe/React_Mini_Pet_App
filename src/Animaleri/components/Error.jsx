@@ -13,7 +13,7 @@ export default function Error404() {
       <h2 className="mt-3 text-danger">Oops! Page Not Found</h2>
       <p className="text-muted">The page you're looking for doesn't exist or has been moved.</p>
       <Link to="/" className="btn btn-primary mt-3">
-        Go Home 🏠
+        Go Home
       </Link>
     </div>
   );

@@ -20,10 +20,10 @@ export default function Footer({text}) {
           <p className="mb-0">&copy; 2025 Pet Shop. All Rights Reserved.</p>
           <p>Follow us on social media:</p>
           <div>
-            <a href="#" className="text-light me-3">
+            <a href="https://www.facebook.com/DevMind1" className="text-light me-3">
             <img src={Face} width={35} alt="" />
             </a>
-            <a href="#" className="text-light me-3">
+            <a href="https://www.instagram.com/abdelmedia1/" className="text-light me-3">
             <img src={Insta} width={35} alt="" />
             </a>
             <a href="#" className="text-light me-3">
