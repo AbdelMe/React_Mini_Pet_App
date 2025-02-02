@@ -1,8 +1,6 @@
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../Style/Nav.css";
 import { Link } from "react-router-dom";
-// import Cartt from "./Icons/shopping-bag.png";
-// import Fav from "./Icons/favorites.png";
 import Cart from "./Cart";
 import { useState } from "react";
 import { useSelector } from "react-redux";
