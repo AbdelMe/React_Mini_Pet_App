@@ -20,7 +20,7 @@ export default function Search() {
   return (
     <>
       <Sidebar>
-        <h1 className="text-light">Search For a Pet</h1>
+        <h1 className="text-light">Find Your Pet</h1>
         <div className="container col-sm-6">
           {/* Search Input */}
           <input
