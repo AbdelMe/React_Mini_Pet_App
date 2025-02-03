@@ -19,7 +19,7 @@ export default function Disease() {
           </label>
           <div className="col-sm-3">
             <select className="form-select" id="petType" onChange={e=>SetSearchType(e.target.value)}>
-              <option value={SearchType}>Select a pet type</option>
+              <option value=''>Select a pet type</option>
               <option value="dog">Dog</option>
               <option value="cat">Cat</option>
               <option value="rabbit">Rabbit</option>
@@ -60,7 +60,7 @@ export default function Disease() {
                     </>
                   );
                 })
-              ) :(<h1 className="m-auto">No Data</h1>)}
+              ) : SearchType !== '' ? (<h1 className="m-auto">No Data</h1>) : ''}
             </div>
       </Sidebar>
     </div>

@@ -257,7 +257,7 @@ export default function Adopt() {
           </>
         ) : checkBtn === false ? (
           <>
-            <div className="d-flex justify-content-evenly flex-wrap mt-4">
+            <div className="d-flex justify-content-evenly flex-wrap mt-4" >
               {data.map((pet) => {
                 return (
                   <>

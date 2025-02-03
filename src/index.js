@@ -21,9 +21,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <Provider store={StoreToolkit}>
         <BrowserRouter>
-
             <Routes>
-
                 <Route path='/' element={<Home1></Home1>}></Route>
                 <Route path='/PetDetails' element={<Home></Home>}></Route>
                 <Route path='/PetOwner' element={<PetOwner></PetOwner>}></Route>
@@ -37,7 +35,6 @@ root.render(
                 <Route path='/vet' element={<Veterinarian></Veterinarian>}></Route>
                 <Route path='/advices' element={<Advices></Advices>}></Route>
                 <Route path='/*' element={<Error404></Error404>}></Route>
-
             </Routes>
         </BrowserRouter>
     </Provider>

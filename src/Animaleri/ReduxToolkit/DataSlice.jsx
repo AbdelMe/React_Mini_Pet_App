@@ -8,19 +8,19 @@ const DataSlice = createSlice({
   initialState: AllData,
   reducers: {
     AddToPet: (state,action) => {
-      {state.DataBase.Adopt_Pet = [...state.DataBase.Adopt_Pet,action.payload]};
+      state.DataBase.Adopt_Pet = [...state.DataBase.Adopt_Pet,action.payload];
     },
     AddToCart: (state,action)=>{
-      {state.DataBase.Cart = [...state.DataBase.Cart,action.payload]}
+      state.DataBase.Cart = [...state.DataBase.Cart,action.payload]
     },
     DeleteFromCart: (state,action)=>{
-      {state.DataBase.Cart.splice(action.payload,1)}
+      state.DataBase.Cart.splice(action.payload,1)
     },
     AddToFavourit: (state,action)=>{
-      {state.DataBase.Favourite = [...state.DataBase.Favourite,action.payload]}
+      state.DataBase.Favourite = [...state.DataBase.Favourite,action.payload]
     },
     DeleteFromFav: (state,action)=>{
-      {state.DataBase.Cart.splice(action.payload,1)}
+      window.confirm('ok!!!') && state.DataBase.Favourite.splice(action.payload,1)
     },
   },
 });
