@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Sidebar from "../PetDetailsComponent";
 import { useSelector, useDispatch } from "react-redux";
 import { AddToPet } from "../../ReduxToolkit/DataSlice";
+import { motion } from "framer-motion";
+
 // import { StrictMode } from "react";
 
 export default function Adopt() {
@@ -257,7 +259,9 @@ export default function Adopt() {
           </>
         ) : checkBtn === false ? (
           <>
-            <div className="d-flex justify-content-evenly flex-wrap mt-4" >
+            <motion.div className="d-flex justify-content-evenly flex-wrap mt-4" 
+                                    initial={{scale:0}}
+                                    animate={{scale:1}} transition={{duration:.5}}>
               {data.map((pet) => {
                 return (
                   <>
@@ -292,7 +296,7 @@ export default function Adopt() {
                   </>
                 );
               })}
-            </div>
+            </motion.div>
           </>
         ) : (
           ""

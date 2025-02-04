@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Sidebar from "../PetDetailsComponent";
 import { useSelector } from "react-redux";
+import { motion } from "framer-motion";
+
 
 export default function Disease() {
   const data = useSelector((state) => state.Compt.DataBase.Pet_Disease);
@@ -32,9 +34,11 @@ export default function Disease() {
                 FiltredData.map((pet) => {
                   return (
                     <>
-                      <div
+                      <motion.div
                         className="card rounded-4 bg-black text-light w-25 mx-1"
                         style={{ width: "14rem" }}
+                        initial={{scale:0}}
+                        animate={{scale:1}} transition={{duration:.5}}
                       >
                         {/* Pet Image */}
                         <img
@@ -56,7 +60,7 @@ export default function Disease() {
                             Show More
                           </button>
                         </div>
-                      </div>
+                      </motion.div>
                     </>
                   );
                 })

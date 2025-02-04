@@ -5,6 +5,7 @@ import { AddToCart, AddToFavourit } from "../../ReduxToolkit/DataSlice";
 import { Modal, Button, Form } from "react-bootstrap";
 import pic from "../../Icons/shopping-bag.png";
 import fav from "../../Icons/favorites.png";
+import { motion } from "framer-motion";
 
 export default function Buy() {
   const data = useSelector((state) => state.Compt.DataBase.Pets);
@@ -64,7 +65,12 @@ export default function Buy() {
     <>
       <Sidebar>
         <h1 className="text-light">Buy a Pet</h1>
-        <div className="d-flex justify-content-center mt-4">
+        <motion.div
+          className="d-flex justify-content-center mt-4"
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
           {data.map((pet) => {
             return (
               <div
@@ -123,7 +129,7 @@ export default function Buy() {
               </div>
             );
           })}
-        </div>
+        </motion.div>
       </Sidebar>
 
       {/* Modal */}

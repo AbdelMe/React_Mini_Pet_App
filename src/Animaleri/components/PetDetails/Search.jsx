@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Sidebar from "../PetDetailsComponent";
 import { useSelector } from "react-redux";
 
+
 export default function Search() {
   const data = useSelector((state) => state.Compt.DataBase.Pets);
   const [SearchVal, SetSearchVal] = useState("");
