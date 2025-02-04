@@ -261,7 +261,7 @@ export default function Adopt() {
           <>
             <motion.div className="d-flex justify-content-evenly flex-wrap mt-4" 
                                     initial={{scale:0}}
-                                    animate={{scale:1}} transition={{duration:.5}}>
+                                    animate={{scale:1}} transition={{duration:.4}}>
               {data.map((pet) => {
                 return (
                   <>
