@@ -5,7 +5,7 @@ export default function Error404() {
   return (
     <div className="d-flex flex-column justify-content-center align-items-center vh-100 bg-light text-center">
       <img
-        src={require('../Pictures/error404.png')}
+        src={require('../Pictures/Error404.png')}
         alt="404 Not Found"
         className="img-fluid"
         style={{ maxWidth: '600px' }}

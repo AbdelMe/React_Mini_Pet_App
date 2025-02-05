@@ -220,7 +220,6 @@ export default function Adopt() {
                 </div>
               </div>
 
-
               {/* Pet Breed Section */}
               {/* <div className="row mb-3 d-flex align-items-center">
                 <label
@@ -259,9 +258,12 @@ export default function Adopt() {
           </>
         ) : checkBtn === false ? (
           <>
-            <motion.div className="d-flex justify-content-evenly flex-wrap mt-4" 
-                                    initial={{scale:0}}
-                                    animate={{scale:1}} transition={{duration:.4}}>
+            <motion.div
+              className="d-flex justify-content-evenly flex-wrap mt-4"
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.4 }}
+            >
               {data.map((pet) => {
                 return (
                   <>
