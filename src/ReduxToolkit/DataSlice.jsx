@@ -1,6 +1,6 @@
 /* eslint-disable no-lone-blocks */
 import { createSlice} from "@reduxjs/toolkit";
-import data from "../Data";
+import data from "@/Data";
 const AllData = data;
 
 const DataSlice = createSlice({

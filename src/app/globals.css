@@ -1,16 +1,29 @@
-body{
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    color: white;
-    font-family: 'Sour Gummy','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    /* background-color: #65CCB8; */
-    /* background-color: #57BA98; */
-    background-image: url('../Pictures/wallpaperflare.com_wallpaper\ \(4\).jpg');
-    background-size: cover;
-    background-position: bottom center; 
-    background-repeat: no-repeat;
-    height: 100vh
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
 }
 .NavDiv{
     /* background-color: transparent; */

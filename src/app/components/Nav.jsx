@@ -1,10 +1,11 @@
+"use client"
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import "../Style/Nav.css";
-import { Link } from "react-router-dom";
-import Cart from "./Cart";
+import Link from "next/link";
+import Image from "next/image";
+// import Cart from "./Cart";
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import Favourite from "./Favourite";
+// import Favourite from "./Favourite";
 export default function Nav() {
   const [ShowCart, SetShowCart] = useState(false);
   const [ShowFav, SetShowFav] = useState(false);
@@ -16,16 +17,16 @@ export default function Nav() {
     <div className="sticky-top">
       <div className="py-3 text-primary rounded-5 container w-50 NavDiv mt-2 sticky-top">
         <ul className="d-flex justify-content-around px-0 m-0 rounded">
-          <Link to="/" className="text-light text-decoration-none">
+          <Link href="/" className="text-light text-decoration-none">
             Home
           </Link>
-          <Link to="/PetOwner" className="text-light text-decoration-none">
+          <Link href="/PetOwner" className="text-light text-decoration-none">
             Pet Owner
           </Link>
-          <Link to="/PetDetails" className="text-light text-decoration-none">
+          <Link href="/PetDetails" className="text-light text-decoration-none">
             Pet Details
           </Link>
-          <Link to="/About" className="text-light text-decoration-none">
+          <Link href="/About" className="text-light text-decoration-none">
             About
           </Link>
         </ul>
@@ -57,29 +58,21 @@ export default function Nav() {
         >
           {data1.length >= 9 ? "+" + 9 : data1.length}
         </div>
-        <img
-          src={require("../Icons/favorites.png")}
+        <Image
+          src={require("../../Icons/favorites.png")}
           alt=""
           id="Favourite"
           style={{ cursor: "pointer" }}
-          onClick={() => {
-            SetShowFav(true);
-          }}
         />
-        <img
-          src={require("../Icons/shopping-bag.png")}
+        <Image src={require("../../Icons/shopping-bag.png")}
           alt=""
           id="Cart"
-          style={{ cursor: "pointer" }}
-          onClick={() => {
-            SetShowCart(true);
-          }}
-        />
-        <Link to="/Login">
-          <img src={require('../Icons/LogOut.png')} alt="" id="LogOut" style={{ cursor: "pointer" }} />
+          style={{ cursor: "pointer" }}/>
+        <Link href="/Login">
+          <Image src={require('../../Icons/LogOut.png')} alt="" id="LogOut" style={{ cursor: "pointer" }} />
         </Link>
-        <div>{ShowCart ? <Cart></Cart> : ""}</div>
-        <div>{ShowFav ? <Favourite></Favourite> : ""}</div>
+        {/* <div>{ShowCart ? <Cart></Cart> : ""}</div>
+        <div>{ShowFav ? <Favourite></Favourite> : ""}</div> */}
       </div>
     </div>
   );
