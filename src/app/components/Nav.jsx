@@ -1,10 +1,11 @@
-"use client"
+"use client";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Link from "next/link";
 import Image from "next/image";
 // import Cart from "./Cart";
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import Cart from "./Cart";
 // import Favourite from "./Favourite";
 export default function Nav() {
   const [ShowCart, SetShowCart] = useState(false);
@@ -63,16 +64,29 @@ export default function Nav() {
           alt=""
           id="Favourite"
           style={{ cursor: "pointer" }}
+          onClick={() => {
+            SetShowFav(true);
+          }}
         />
-        <Image src={require("../../Icons/shopping-bag.png")}
+        <Image
+          src={require("../../Icons/shopping-bag.png")}
           alt=""
           id="Cart"
-          style={{ cursor: "pointer" }}/>
+          style={{ cursor: "pointer" }}
+          onClick={() => {
+            SetShowCart(true);
+          }}
+        />
         <Link href="/Login">
-          <Image src={require('../../Icons/LogOut.png')} alt="" id="LogOut" style={{ cursor: "pointer" }} />
+          <Image
+            src={require("../../Icons/LogOut.png")}
+            alt=""
+            id="LogOut"
+            style={{ cursor: "pointer" }}
+          />
         </Link>
-        {/* <div>{ShowCart ? <Cart></Cart> : ""}</div>
-        <div>{ShowFav ? <Favourite></Favourite> : ""}</div> */}
+        <div>{ShowCart ? <Cart></Cart> : ""}</div>
+        {/* <div>{ShowFav ? <Favourite></Favourite> : ""}</div> */}
       </div>
     </div>
   );
