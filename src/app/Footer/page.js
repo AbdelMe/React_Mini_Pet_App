@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { createContext } from "react";
-import Linkedin from '../Icons/linkedin.png'
-import Face from '../Icons/facebook.png'
-import Insta from '../Icons/instagram.png'
-import Teleg from '../Icons/telegram.png'
-import Twitt from '../Icons/twitter.png'
+import Linkedin from '../../Icons/linkedin.png'
+import Face from '../..//Icons/facebook.png'
+import Insta from '../..//Icons/instagram.png'
+import Teleg from '../..//Icons/telegram.png'
+import Twitt from '../..//Icons/twitter.png'
 import Image from "next/image";
 
 export const textColor = createContext({
