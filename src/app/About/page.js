@@ -8,6 +8,7 @@ import Image from "next/image";
 
 export default function AboutPage(){
   // const textC = useContext(textColor)
+  //consol.log(textC)
   return (
     <>
     <Nav></Nav>
