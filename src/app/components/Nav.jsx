@@ -2,11 +2,10 @@
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Link from "next/link";
 import Image from "next/image";
-// import Cart from "./Cart";
+import Cart from "./Cart";
+import Favourite from "./Favourite";
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import Cart from "./Cart";
-// import Favourite from "./Favourite";
 export default function Nav() {
   const [ShowCart, SetShowCart] = useState(false);
   const [ShowFav, SetShowFav] = useState(false);
@@ -18,7 +17,7 @@ export default function Nav() {
     <div className="sticky-top">
       <div className="py-3 text-primary rounded-5 container w-50 NavDiv mt-2 sticky-top">
         <ul className="d-flex justify-content-around px-0 m-0 rounded">
-          <Link href="/" className="text-light text-decoration-none">
+          <Link href="/HomePage" className="text-light text-decoration-none">
             Home
           </Link>
           <Link href="/PetOwner" className="text-light text-decoration-none">
@@ -86,7 +85,7 @@ export default function Nav() {
           />
         </Link>
         <div>{ShowCart ? <Cart></Cart> : ""}</div>
-        {/* <div>{ShowFav ? <Favourite></Favourite> : ""}</div> */}
+        <div>{ShowFav ? <Favourite></Favourite> : ""}</div>
       </div>
     </div>
   );

@@ -1,9 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import PetOwn from "../../Pictures/profile-pic (2).png";
-import '../globals.css'
 // import Footer from "./Footer";
-import Nav from "../components/Nav";
+import Nav from "./Nav";
 import Image from "next/image";
 export default function PetOwner() {
   const owner = {
@@ -11,6 +9,7 @@ export default function PetOwner() {
     email: "Medabdel@gmail.com",
     phone: "+212 644991166",
     location: "Fes, Maroc",
+    image: "https://via.placeholder.com/150",
   };
 
   const pets = [
@@ -44,8 +43,8 @@ export default function PetOwner() {
     <Nav></Nav>
       <div className="container mt-5">
         {/* Owner Profile */}
-        <div className="card p-4 shadow-sm mb-4 text-light" id="content">
-          <div className="row align-items-center ">
+        <div className="card p-4 shadow-sm mb-4 content text-light">
+          <div className="row align-items-center">
             <div className="col-md-3 text-center">
               <Image
                 src={PetOwn}
@@ -67,8 +66,8 @@ export default function PetOwner() {
         <div className="row">
           {pets.map((pet, index) => (
             <div key={index} className="col-md-6">
-              <div className="card p-3 mb-3 shadow-sm d-flex flex-row align-items-center text-light mt-2" id="content">
-                <img
+              <div className="card p-3 mb-3 shadow-sm d-flex flex-row align-items-center content text-light mt-2">
+                <Image
                   src={pet.image}
                   alt={pet.name}
                   className="rounded-circle img-fluid me-3"
