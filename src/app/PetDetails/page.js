@@ -29,7 +29,7 @@ function Sidebar({ children }) {
       icon: "../assets/Icons/search.png",
       path: "/PetDetails/FindPet",
     },
-    { name: "Pet Food", icon: "../assets/Icons/bone.png", path: "/food" },
+    { name: "Pet Food", icon: "../assets/Icons/bone.png", path: "/PetDetails/PetFood" },
     {
       name: "Pet Disease",
       icon: "../assets/Icons/germs.png",
@@ -84,8 +84,8 @@ function Sidebar({ children }) {
                 <Link
                   href={item.path}
                   className={`nav-link text-white d-flex align-items-center ${isCollapsed
-                      ? "justify-content-center"
-                      : "justify-content-start"
+                    ? "justify-content-center"
+                    : "justify-content-start"
                     } fs-5`}
                 >
                   <img
