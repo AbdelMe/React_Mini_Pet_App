@@ -20,7 +20,7 @@ const DataSlice = createSlice({
       state.DataBase.Favourite = [...state.DataBase.Favourite,action.payload]
     },
     DeleteFromFav: (state,action)=>{
-      window.confirm('ok!!!') && state.DataBase.Favourite.splice(action.payload,1)
+      window.confirm('Are You Sure You Want To Delete ' + state.DataBase.Favourite[action.payload].name) && state.DataBase.Favourite.splice(action.payload,1)
     },
   },
 });
