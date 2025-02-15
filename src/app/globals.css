@@ -22,7 +22,7 @@ body {
   font-family: 'Sour Gummy','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   /* background-color: #65CCB8; */
   /* background-color: #57BA98; */
-  background-image: url('../Pictures/wallpaperflare.com_wallpaper\ \(4\).jpg');
+  background-image: url('/Pictures/wallpaperflare.com_wallpaper\ \(4\).jpg');
   background-size: cover;
   background-position: bottom center; 
   background-repeat: no-repeat;
@@ -40,6 +40,10 @@ body {
     background-color: #182628;
     backdrop-filter: blur(10px);
 
+}
+#NavDiv{
+    background-color: #182628;
+    backdrop-filter: blur(10px);
 }
 #content{
     background-color: #18262869;

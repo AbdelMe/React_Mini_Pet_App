@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 "use client";
 import React, { useContext } from "react";
-import HappyPet from "../../Pictures/HappyPet.png";
+// import HappyPet from "../../Pictures/HappyPet.png";
 // import Footer from "./Footer";
 // import { textColor } from "./Footer";
 import Nav from "../components/Nav";
@@ -69,8 +69,9 @@ export default function Home1() {
         <div className="row align-items-center mt-4">
           <div className="col-md-6">
             <Image
-              src={HappyPet}
+              src={"/Pictures/HappyPet.png"}
               width={450}
+              height={450}
               alt="Happy Pets"
               className="img-fluid rounded"
             />

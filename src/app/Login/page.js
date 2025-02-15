@@ -1,9 +1,9 @@
 "use client";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function Login() {
-  const Rt = useRouter();
+  const router = useRouter();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -33,13 +33,13 @@ export default function Login() {
     }
 
     if (valid) {
-      Rt.replace('/')
+      router.replace('/HomePage');
     }
   };
 
   return (
     <div className="d-flex justify-content-center align-items-center vh-100">
-      <div className="card p-4 rounded-4 content text-light" style={{ width: "350px" }}>
+      <div className="card p-4 rounded-4 text-light" id="content" style={{ width: "350px" }}>
         <h2 className="text-center mb-4">Login</h2>
         <div className="mb-3">
           <label className="form-label">Email</label>

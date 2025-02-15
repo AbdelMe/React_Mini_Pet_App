@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Link from "next/link";
@@ -58,30 +59,36 @@ export default function Nav() {
         >
           {data1.length >= 9 ? "+" + 9 : data1.length}
         </div>
-        <Image
-          src={require("../../Icons/favorites.png")}
+        <img
+          src="/assets/Icons/favorites.png"
           alt=""
           id="Favourite"
           style={{ cursor: "pointer" }}
+          width={24}
+          height={24}
           onClick={() => {
             SetShowFav(true);
           }}
         />
-        <Image
-          src={require("../../Icons/shopping-bag.png")}
+        <img
+          src="/assets/Icons/shopping-bag.png"
           alt=""
           id="Cart"
           style={{ cursor: "pointer" }}
+          width={24}
+          height={24}
           onClick={() => {
             SetShowCart(true);
           }}
         />
         <Link href="/Login">
-          <Image
-            src={require("../../Icons/LogOut.png")}
+          <img
+            src="/assets/Icons/LogOut.png"
             alt=""
             id="LogOut"
             style={{ cursor: "pointer" }}
+            width={24}
+            height={24}
           />
         </Link>
         <div>{ShowCart ? <Cart></Cart> : ""}</div>

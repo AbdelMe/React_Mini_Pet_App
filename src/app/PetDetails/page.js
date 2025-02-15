@@ -17,7 +17,7 @@ function Sidebar({ children }) {
     {
       name: "Adopt a Pet",
       icon: "../assets/Icons/animal-shelter.png",
-      path: "/PetDetails/adopt",
+      path: "/PetDetails/Adopt",
     },
     {
       name: "Buy a Pet",
@@ -33,7 +33,7 @@ function Sidebar({ children }) {
     {
       name: "Pet Disease",
       icon: "../assets/Icons/germs.png",
-      path: "/PetDetails/disease",
+      path: "/PetDetails/Disease",
     },
     {
       name: "Veterinarian",

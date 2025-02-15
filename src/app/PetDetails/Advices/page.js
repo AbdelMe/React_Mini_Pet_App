@@ -34,13 +34,13 @@ export default function PetAdvice() {
     <div className="container">
       <div className="text-center mb-4">
         <p className="text-success fw-bold">PET CARE ADVICE</p>
-        <h2 className="fw-bold">Helpful Tips for a Healthy Pet</h2>
+        <h2 className="fw-bold text-light">Helpful Tips for a Healthy Pet</h2>
       </div>
 
       <div className="row">
         {adviceList.map((advice, index) => (
           <div key={index} className="col-md-4 mb-4">
-            <div className="card shadow-sm NavDiv text-light rounded-4">
+            <div className="card shadow-sm text-light rounded-4" id='NavDiv'>
               <div className="card-body">
                 <h5 className="card-title text-success">{advice.title}</h5>
                 <p className="card-text">{advice.description}</p>

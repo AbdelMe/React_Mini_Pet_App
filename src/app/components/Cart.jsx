@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { DeleteFromCart } from "@/ReduxToolkit/DataSlice";
@@ -39,11 +40,13 @@ export default function Cart() {
             {data.map((pet, index) => (
               <tr key={index}>
                 <td>
-                  <Image
+                  <img
                     src={pet.pic}
                     alt={pet.name}
                     className="rounded-circle"
                     style={{ width: "40px", height: "40px" }}
+                    // width={40}
+                    // height={40}
                   />
                 </td>
                 <td>{pet.type}</td>
