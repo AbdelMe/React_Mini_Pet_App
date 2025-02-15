@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import PetOwn from "../../Pictures/profile-pic (2).png";
+// import PetOwn from "../../Pictures/profile-pic (2).png";
 import '../globals.css'
 // import Footer from "./Footer";
 import Nav from "../components/Nav";
@@ -48,7 +48,9 @@ export default function PetOwner() {
           <div className="row align-items-center ">
             <div className="col-md-3 text-center">
               <Image
-                src={PetOwn}
+                src="/Pictures/profile-pic (2).png"
+                width={300}
+                height={300}
                 alt="Owner"
                 className="rounded-circle img-fluid"
               />

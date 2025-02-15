@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 import React, { useContext } from "react";
-import aboutPic from '../../Pictures/aboutPic.png'
+// import aboutPic from '../../Pictures/aboutPic.png'
 // import Footer from "./Footer";
 // import { textColor } from "./Footer";
 import Nav from "../components/Nav";
@@ -26,9 +26,10 @@ export default function AboutPage(){
       <section className="row align-items-center">
         <div className="col-md-6">
           <Image
-            src={aboutPic}
+            src="/Pictures/aboutPic.png"
             alt="aboutPic"
             width={450}
+            height={450}
             style={{position: "absolute" , bottom:"20px"}}
           />
         </div>
