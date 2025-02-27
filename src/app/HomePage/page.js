@@ -7,6 +7,7 @@ import React, { useContext } from "react";
 import Nav from "../components/Nav";
 import Image from "next/image";
 
+
 export default function Home1() {
   // const textC = useContext(textColor);
 
