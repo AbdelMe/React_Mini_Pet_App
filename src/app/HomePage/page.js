@@ -6,6 +6,7 @@ import React, { useContext } from "react";
 // import { textColor } from "./Footer";
 import Nav from "../components/Nav";
 import Image from "next/image";
+import Footer from "../Footer/page";
 
 
 export default function Home1() {
@@ -126,7 +127,7 @@ export default function Home1() {
             ))}
           </div>
         </div>
-        {/* <Footer text={textC.textLight}></Footer> */}
+        <Footer ></Footer>
       </div>
     </div>
   );
